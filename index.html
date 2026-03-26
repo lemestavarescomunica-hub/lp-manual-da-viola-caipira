@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="O único método de viola caipira do Brasil que une livro físico premium com 107 músicas + curso completo do zero ao avançado + curso de pagode, tudo acessível por QR Code simples — sem senhas, sem plataformas, sem complicação. É só apontar o celular e aprender." />
+  <title>Manual da Viola Caipira — Finalmente, Toque Viola Caipira Sem Complicação Tecnológica</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800;900&family=Source+Sans+Pro:wght@400;500;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { 
+      font-family: 'Source Sans Pro', sans-serif; 
+      background-color: #FDF8F3; 
+      color: #2D1810;
+      line-height: 1.6;
+    }
+    h1, h2, h3, h4 { font-family: 'Playfair Display', sans-serif; }
+
+    /* Animations */
+    @keyframes fadeInUp { from { opacity:0; transform:translateY(30px); } to { opacity:1; transform:translateY(0); } }
+    @keyframes pulse-cta { 0%,100% { box-shadow: 0 0 0 0 #C41E3A66; } 50% { box-shadow: 0 0 0 14px #C41E3A00; } }
+    @keyframes float { 0%,100% { transform:translateY(0); } 50% { transform:translateY(-8px); } }
+    @keyframes countdown-tick { from { transform:scale(1.15); } to { transform:scale(1); } }
+
+    .fadeInUp { animation: fadeInUp 0.75s ease forwards; }
+    .pulse-cta { animation: pulse-cta 2s infinite; }
+    .float { animation: float 3s ease-in-out infinite; }
+
+    .benefit-card:hover { transform:translateY(-4px); box-shadow: 0 12px 32px #8B451333; }
+    .testimonial-card { transition: transform 0.2s, box-shadow 0.2s; }
+    .testimonial-card:hover { transform:translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.12); }
+
+    /* Reveal on scroll */
+    .reveal { opacity:0; transform:translateY(28px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.visible { opacity:1; transform:translateY(0); }
+
+    /* Sticky header */
+    #sticky-header { transition: background 0.3s ease; }
+
+    /* Gradient text */
+    .gradient-text {
+      background: linear-gradient(135deg, #8B4513, #C41E3A);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Grid helpers */
+    .benefits-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:1.25rem; }
+    .testimonials-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:1.25rem; }
+
+    @media (max-width:640px) {
+      .hero-headline { font-size:2rem !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- URGENCY BAR -->
+  <div style="background:#C41E3A; color:white; text-align:center; padding:0.6rem 1rem; font-size:0.9rem; font-weight:600; position:relative; z-index:50;">
+    🔥 ⚠️ ATENÇÃO: Edição física LIMITADA + Frete Grátis só para esta remessa — Estoque acabando!
+  </div>
+
+  <!-- STICKY HEADER -->
+  <header id="sticky-header" style="position:sticky; top:0; z-index:40; background:#FDF8F3ee; backdrop-filter:blur(12px); border-bottom:1px solid #8B451322; padding:0.85rem 1.5rem; display:flex; align-items:center; justify-content:space-between;">
+    <span style="font-family:'Playfair Display',sans-serif; font-weight:800; color:#8B4513; font-size:1.1rem;">Manual da Viola Caipira</span>
+    <a href="#oferta" style="background:#C41E3A; color:white; padding:0.55rem 1.25rem; border-radius:8px; font-weight:700; text-decoration:none; font-size:0.9rem; transition:opacity 0.2s;" onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">QUERO MEU MANUAL DA VIOLA CAIPIRA COM FRETE GRÁTIS</a>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="hero" style="padding:5rem 1.5rem 4rem; text-align:center; background: linear-gradient(160deg, #FDF8F3 0%, #FFFFFF 100%);">
+    <div style="max-width:800px; margin:0 auto;">
+      <div class="fadeInUp" style="animation-delay:0.1s;">
+        <div style="display:inline-block; background:#8B451322; color:#8B4513; border-radius:999px; padding:0.4rem 1rem; font-size:0.85rem; font-weight:600; margin-bottom:1.5rem; border:1px solid #8B451344;">
+          ✦ O método que finalmente respeita sua experiência de vida: um livro de verdade nas suas mãos, com a tecnologia trabalhando PRA você (não contra você) — é só apontar o celular e a aula aparece, simples assim.
+        </div>
+      </div>
+      <h1 class="hero-headline fadeInUp gradient-text" style="font-size:3.25rem; font-weight:900; line-height:1.15; margin-bottom:1.25rem; animation-delay:0.2s;">
+        Finalmente, Toque Viola Caipira Sem Complicação Tecnológica
+      </h1>
+      <p class="fadeInUp" style="font-size:1.25rem; color:#6B5344; margin-bottom:2rem; line-height:1.7; animation-delay:0.35s;">
+        107 músicas cifradas + curso completo do zero ao avançado + pagode na viola. Tudo num livro físico premium com QR Codes simples: aponte o celular e a aula aparece. Sem senhas, sem plataformas confusas.
+      </p>
+      <p class="fadeInUp" style="color:#6B5344; font-size:1rem; margin-bottom:2.5rem; max-width:640px; margin-left:auto; margin-right:auto; animation-delay:0.45s;">
+        Você sonha em tocar viola caipira, mas toda vez esbarra em plataformas cheias de senhas, logins que expiram e tecnologia que mais atrapalha do que ajuda? Agora existe um método que respeita sua experiência de vida. Um livro de verdade nas suas mãos, com fonte grande e confortável, onde a tecnologia trabalha PRA você — não contra você.
+      </p>
+      <div class="fadeInUp" style="animation-delay:0.55s;">
+        <a href="#oferta" class="pulse-cta" style="display:inline-block; background:#C41E3A; color:white; padding:1rem 2.5rem; border-radius:12px; font-size:1.1rem; font-weight:800; text-decoration:none; transition:transform 0.2s,opacity 0.2s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
+          👉 QUERO MEU MANUAL DA VIOLA CAIPIRA COM FRETE GRÁTIS
+        </a>
+        <p style="color:#6B5344; font-size:0.82rem; margin-top:0.75rem;">🔒 Garantia Incondicional de 7 dias: Se por qualquer motivo você não gostar, devolvemos 100% do seu dinheiro. Sem perguntas, sem burocracia. Você não arrisca nem um centavo.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEM SECTION -->
+  <section id="problema" style="padding:4rem 1.5rem; background:#FFFFFF;">
+    <div style="max-width:760px; margin:0 auto; text-align:center;">
+      <h2 class="reveal" style="font-size:2rem; font-weight:800; margin-bottom:1.25rem; color:#2D1810;">
+        Você Não É o Problema. O Método É Que Estava Errado.
+      </h2>
+      <p class="reveal" style="color:#6B5344; font-size:1.05rem; line-height:1.8;">
+        Quantas vezes você tentou aprender viola online e travou em senhas que não funcionam? Quantas plataformas confusas fizeram você desistir antes de tocar a primeira música? A verdade é que esses métodos modernos não foram feitos pensando em você. Foram feitos por gente jovem, pra gente jovem. E aí sobra aquela sensação amarga: 'Será que isso não é pra minha idade?' Mas eu te digo com toda certeza: o problema NUNCA foi você. Foi o método.
+      </p>
+    </div>
+    <!-- Pain points -->
+    <div class="reveal" style="max-width:900px; margin:2.5rem auto 0; display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:1rem;">
+      <div style="background:#FDF8F3; border-radius:10px; padding:1.25rem; border-left:3px solid #ef4444;">
+        <p style="font-weight:700; color:#ef4444; margin-bottom:0.4rem;">😩 Agora</p>
+        <p style="color:#6B5344; font-size:0.95rem;">Frustração com métodos online cheios de senhas, logins e plataformas confusas que travam, expiram ou são difíceis de navegar para quem não domina tecnologia</p>
+      </div>
+      <div style="background:#FDF8F3; border-radius:10px; padding:1.25rem; border-left:3px solid #f97316;">
+        <p style="font-weight:700; color:#f97316; margin-bottom:0.4rem;">⚠️ No Futuro</p>
+        <p style="color:#6B5344; font-size:0.95rem;">O medo de nunca realizar o sonho de tocar viola antes que seja tarde demais, vendo os anos passarem sem conseguir acompanhar uma roda de viola ou tocar para os netos</p>
+      </div>
+      <div style="background:#FDF8F3; border-radius:10px; padding:1.25rem; border-left:3px solid #a855f7;">
+        <p style="font-weight:700; color:#a855f7; margin-bottom:0.4rem;">🎯 O Que Poucos Percebem</p>
+        <p style="color:#6B5344; font-size:0.95rem;">A vergonha silenciosa de depender dos outros para acessar conteúdos online e a sensação de que 'isso não é pra minha idade' — quando na verdade o problema sempre foi o método, não você</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOLUTION SECTION -->
+  <section id="solucao" style="padding:4rem 1.5rem; background:#FDF8F3;">
+    <div style="max-width:760px; margin:0 auto; text-align:center;">
+      <h2 class="reveal" style="font-size:2rem; font-weight:800; margin-bottom:1.25rem;">
+        Um Livro de Verdade Com a Tecnologia Que Funciona PRA Você
+      </h2>
+      <p class="reveal" style="color:#6B5344; font-size:1.05rem; line-height:1.8; margin-bottom:2rem;">
+        Imagine ter nas mãos um livro físico, bonito, de capa dura, com quase 300 páginas em fonte grande e confortável. Cada uma das 107 músicas tem um QR Code do lado. É só apontar o celular e pronto — a videoaula abre na hora, sem senha, sem login, sem complicação. Você estuda na varanda, na sala, no sítio, onde quiser. O livro é seu pra sempre. E o conhecimento também.
+      </p>
+      <!-- Story -->
+      <div class="reveal" style="background:#FFFFFF; border-radius:16px; padding:2rem; border:1px solid #8B451322; text-align:left;">
+        <p style="font-size:1rem; color:#6B5344; line-height:1.8; font-style:italic;">O Seu Zé tinha 67 anos e um sonho engasgado na garganta: tocar viola caipira. Tentou curso online, mas travava nas senhas. Baixou aplicativo, mas era tudo em inglês. Quase desistiu, achando que 'não era mais idade pra isso'. Até que conheceu o Manual da Viola Caipira. No primeiro dia, sentou na varanda, abriu o livro e apontou o celular pro QR Code. A aula abriu na hora. Sem senha. Sem complicação. Três meses depois, o Seu Zé tocou 'Tristeza do Jeca' inteira no aniversário da neta. A família chorou. Ele chorou mais ainda. Porque não era só uma música — era a prova de que sonho não tem idade.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS SECTION -->
+  <section id="beneficios" style="padding:4rem 1.5rem; background:#FFFFFF;">
+    <div style="max-width:1100px; margin:0 auto;">
+      <h2 class="reveal" style="font-size:2rem; font-weight:800; text-align:center; margin-bottom:2.5rem;">
+        ✅ O Que Você Vai Conquistar
+      </h2>
+      <div class="benefits-grid reveal">
+        
+      <div class="benefit-card" style="background:#FFFFFF; border:1px solid #8B451322; border-radius:12px; padding:1.5rem; display:flex; flex-direction:column; gap:0.75rem; transition:transform 0.2s,box-shadow 0.2s;">
+        <div style="font-size:2rem;">📖</div>
+        <h3 style="font-family:'Playfair Display',sans-serif; font-weight:700; color:#2D1810; font-size:1.15rem; margin:0;">Livro Físico Premium</h3>
+        <p style="color:#6B5344; font-size:0.95rem; margin:0; line-height:1.6;">Capa dura, acabamento de luxo, quase 300 páginas. Um objeto de valor que você vai ter orgulho de mostrar e passar adiante.</p>
+      </div>
+
+      <div class="benefit-card" style="background:#FFFFFF; border:1px solid #8B451322; border-radius:12px; padding:1.5rem; display:flex; flex-direction:column; gap:0.75rem; transition:transform 0.2s,box-shadow 0.2s;">
+        <div style="font-size:2rem;">🔤</div>
+        <h3 style="font-family:'Playfair Display',sans-serif; font-weight:700; color:#2D1810; font-size:1.15rem; margin:0;">Fonte Grande (Tamanho 16)</h3>
+        <p style="color:#6B5344; font-size:0.95rem; margin:0; line-height:1.6;">Leitura confortável, sem forçar a vista. Pensado especialmente pra quem já passou dos 50 e merece esse respeito.</p>
+      </div>
+
+      <div class="benefit-card" style="background:#FFFFFF; border:1px solid #8B451322; border-radius:12px; padding:1.5rem; display:flex; flex-direction:column; gap:0.75rem; transition:transform 0.2s,box-shadow 0.2s;">
+        <div style="font-size:2rem;">🎵</div>
+        <h3 style="font-family:'Playfair Display',sans-serif; font-weight:700; color:#2D1810; font-size:1.15rem; margin:0;">107 Músicas Cifradas</h3>
+        <p style="color:#6B5344; font-size:0.95rem; margin:0; line-height:1.6;">As modas que marcaram sua vida, com cifras e tablaturas completas pra você fazer os ponteados certinho.</p>
+      </div>
+
+      <div class="benefit-card" style="background:#FFFFFF; border:1px solid #8B451322; border-radius:12px; padding:1.5rem; display:flex; flex-direction:column; gap:0.75rem; transition:transform 0.2s,box-shadow 0.2s;">
+        <div style="font-size:2rem;">📱</div>
+        <h3 style="font-family:'Playfair Display',sans-serif; font-weight:700; color:#2D1810; font-size:1.15rem; margin:0;">QR Codes Instantâneos</h3>
+        <p style="color:#6B5344; font-size:0.95rem; margin:0; line-height:1.6;">Aponte o celular, a aula abre. Sem senha, sem login, sem plataforma. Simples assim, do jeito que tem que ser.</p>
+      </div>
+
+      <div class="benefit-card" style="background:#FFFFFF; border:1px solid #8B451322; border-radius:12px; padding:1.5rem; display:flex; flex-direction:column; gap:0.75rem; transition:transform 0.2s,box-shadow 0.2s;">
+        <div style="font-size:2rem;">🎓</div>
+        <h3 style="font-family:'Playfair Display',sans-serif; font-weight:700; color:#2D1810; font-size:1.15rem; margin:0;">Curso Completo do Zero ao Avançado</h3>
+        <p style="color:#6B5344; font-size:0.95rem; margin:0; line-height:1.6;">Aulas práticas e teóricas que pegam você do absoluto zero e levam até o nível intermediário quase avançado.</p>
+      </div>
+
+      <div class="benefit-card" style="background:#FFFFFF; border:1px solid #8B451322; border-radius:12px; padding:1.5rem; display:flex; flex-direction:column; gap:0.75rem; transition:transform 0.2s,box-shadow 0.2s;">
+        <div style="font-size:2rem;">🪗</div>
+        <h3 style="font-family:'Playfair Display',sans-serif; font-weight:700; color:#2D1810; font-size:1.15rem; margin:0;">Curso de Pagode na Viola Incluído</h3>
+        <p style="color:#6B5344; font-size:0.95rem; margin:0; line-height:1.6;">O estilo mais desejado pelos violeiros, agora disponível como bônus. Toque o que todo mundo quer ouvir nas rodas.</p>
+      </div>
+
+      <div class="benefit-card" style="background:#FFFFFF; border:1px solid #8B451322; border-radius:12px; padding:1.5rem; display:flex; flex-direction:column; gap:0.75rem; transition:transform 0.2s,box-shadow 0.2s;">
+        <div style="font-size:2rem;">🏠</div>
+        <h3 style="font-family:'Playfair Display',sans-serif; font-weight:700; color:#2D1810; font-size:1.15rem; margin:0;">Estude Onde Quiser</h3>
+        <p style="color:#6B5344; font-size:0.95rem; margin:0; line-height:1.6;">Leve pra varanda, pro sítio, pra casa do compadre. Não depende de internet boa nem de computador.</p>
+      </div>
+
+      <div class="benefit-card" style="background:#FFFFFF; border:1px solid #8B451322; border-radius:12px; padding:1.5rem; display:flex; flex-direction:column; gap:0.75rem; transition:transform 0.2s,box-shadow 0.2s;">
+        <div style="font-size:2rem;">♾️</div>
+        <h3 style="font-family:'Playfair Display',sans-serif; font-weight:700; color:#2D1810; font-size:1.15rem; margin:0;">Seu Pra Sempre</h3>
+        <p style="color:#6B5344; font-size:0.95rem; margin:0; line-height:1.6;">Não expira, não cancela, não some. O livro é seu e as aulas estão lá sempre que você precisar.</p>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL PROOF -->
+  <section id="depoimentos" style="padding:4rem 1.5rem; background:#FDF8F3;">
+    <div style="max-width:1100px; margin:0 auto;">
+      <h2 class="reveal" style="font-size:2rem; font-weight:800; text-align:center; margin-bottom:0.5rem;">
+        💬 Quem Já Transformou Sua Vida
+      </h2>
+      <p class="reveal" style="text-align:center; color:#6B5344; margin-bottom:2.5rem;">Resultados reais de pessoas reais</p>
+      <div class="testimonials-grid reveal">
+        
+      <div class="testimonial-card" style="background:#FFFFFF; border-left:4px solid #C41E3A; border-radius:12px; padding:1.75rem; display:flex; flex-direction:column; gap:0.75rem;">
+        <p style="color:#2D1810; font-style:italic; font-size:1rem; margin:0; line-height:1.7;">"Meu filho vivia me ajudando a entrar nas plataformas, dava uma vergonha danada. Com esse livro, faço tudo sozinho. É só apontar o celular e a aula aparece. Voltei a ter autonomia pra estudar!"</p>
+        <div style="display:flex; align-items:center; gap:0.75rem; margin-top:0.5rem;">
+          <div style="width:44px; height:44px; border-radius:50%; background:#8B4513; display:flex; align-items:center; justify-content:center; color:white; font-weight:700; font-size:1.1rem;">A</div>
+          <div>
+            <p style="font-weight:700; color:#2D1810; margin:0;">Antônio Carlos, 72 anos</p>
+            <p style="color:#6B5344; font-size:0.85rem; margin:0;">Aposentado, Minas Gerais</p>
+          </div>
+        </div>
+        <div style="background:#228B2222; border-radius:8px; padding:0.5rem 0.75rem; color:#228B22; font-weight:600; font-size:0.9rem;">✅ Aprendeu 23 músicas em 4 meses, sem pedir ajuda pra ninguém</div>
+      </div>
+
+      <div class="testimonial-card" style="background:#FFFFFF; border-left:4px solid #C41E3A; border-radius:12px; padding:1.75rem; display:flex; flex-direction:column; gap:0.75rem;">
+        <p style="color:#2D1810; font-style:italic; font-size:1rem; margin:0; line-height:1.7;">"A fonte grande foi o que me conquistou primeiro. Eu uso óculos e sofria muito com letra miúda. Agora leio tudo com conforto, e as videoaulas são muito bem explicadas, com calma, no meu ritmo."</p>
+        <div style="display:flex; align-items:center; gap:0.75rem; margin-top:0.5rem;">
+          <div style="width:44px; height:44px; border-radius:50%; background:#8B4513; display:flex; align-items:center; justify-content:center; color:white; font-weight:700; font-size:1.1rem;">M</div>
+          <div>
+            <p style="font-weight:700; color:#2D1810; margin:0;">Maria Helena, 63 anos</p>
+            <p style="color:#6B5344; font-size:0.85rem; margin:0;">Professora aposentada, São Paulo</p>
+          </div>
+        </div>
+        <div style="background:#228B2222; border-radius:8px; padding:0.5rem 0.75rem; color:#228B22; font-weight:600; font-size:0.9rem;">✅ Toca viola nas reuniões de família todo fim de semana</div>
+      </div>
+
+      <div class="testimonial-card" style="background:#FFFFFF; border-left:4px solid #C41E3A; border-radius:12px; padding:1.75rem; display:flex; flex-direction:column; gap:0.75rem;">
+        <p style="color:#2D1810; font-style:italic; font-size:1rem; margin:0; line-height:1.7;">"Moro no sítio, internet aqui é fraca demais. Outros cursos nem abriam. Esse livro mudou tudo — baixo as aulas pelo QR Code quando vou na cidade e assisto aqui tranquilo. Genial!"</p>
+        <div style="display:flex; align-items:center; gap:0.75rem; margin-top:0.5rem;">
+          <div style="width:44px; height:44px; border-radius:50%; background:#8B4513; display:flex; align-items:center; justify-content:center; color:white; font-weight:700; font-size:1.1rem;">J</div>
+          <div>
+            <p style="font-weight:700; color:#2D1810; margin:0;">José Roberto, 58 anos</p>
+            <p style="color:#6B5344; font-size:0.85rem; margin:0;">Agricultor, Goiás</p>
+          </div>
+        </div>
+        <div style="background:#228B2222; border-radius:8px; padding:0.5rem 0.75rem; color:#228B22; font-weight:600; font-size:0.9rem;">✅ Montou uma roda de viola com os vizinhos do sítio</div>
+      </div>
+
+      <div class="testimonial-card" style="background:#FFFFFF; border-left:4px solid #C41E3A; border-radius:12px; padding:1.75rem; display:flex; flex-direction:column; gap:0.75rem;">
+        <p style="color:#2D1810; font-style:italic; font-size:1rem; margin:0; line-height:1.7;">"Com 81 anos, eu achava que tinha passado minha hora. Meus filhos deram de presente e eu aprendi de verdade. Hoje toco pagode na viola e a turma do dominó não acredita!"</p>
+        <div style="display:flex; align-items:center; gap:0.75rem; margin-top:0.5rem;">
+          <div style="width:44px; height:44px; border-radius:50%; background:#8B4513; display:flex; align-items:center; justify-content:center; color:white; font-weight:700; font-size:1.1rem;">S</div>
+          <div>
+            <p style="font-weight:700; color:#2D1810; margin:0;">Sebastião Oliveira, 81 anos</p>
+            <p style="color:#6B5344; font-size:0.85rem; margin:0;">O aluno mais velho do método</p>
+          </div>
+        </div>
+        <div style="background:#228B2222; border-radius:8px; padding:0.5rem 0.75rem; color:#228B22; font-weight:600; font-size:0.9rem;">✅ Aos 81 anos, aprendeu pagode na viola do zero</div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OFFER SECTION -->
+  <section id="oferta" style="padding:4.5rem 1.5rem; background: linear-gradient(135deg, #8B451318 0%, #C41E3A18 100%);">
+    <div style="max-width:720px; margin:0 auto; text-align:center;">
+      <h2 class="reveal" style="font-size:2.25rem; font-weight:900; margin-bottom:0.75rem;">
+        Tudo Isso Num Único Livro Premium
+      </h2>
+      <p class="reveal" style="color:#6B5344; font-size:1.05rem; margin-bottom:2rem;">Você não está comprando só um livro. Está investindo no sonho que você carrega há anos e finalmente vai realizar.</p>
+
+      <!-- Price Anchor -->
+      <div class="reveal" style="background:#FFFFFF; border-radius:16px; padding:2rem; margin-bottom:1.5rem; border:2px solid #C41E3A44;">
+        <p style="color:#6B5344; text-decoration:line-through; font-size:1.1rem; margin-bottom:0.25rem;">De R$ 497 (valor real considerando livro premium + 3 cursos completos + frete)</p>
+        <p style="font-size:3rem; font-weight:900; color:#C41E3A; line-height:1.1; margin-bottom:0.25rem;">R$ 277 à vista ou 12x de R$ 28,65</p>
+        <p style="color:#228B22; font-weight:700; font-size:0.95rem;">🎉 Economia de R$ 220 + Frete Grátis (mais R$ 45 de economia)</p>
+      </div>
+
+      <!-- Bonuses -->
+      <div class="reveal" style="background:#FFFFFF; border-radius:16px; padding:1.75rem; margin-bottom:1.5rem; text-align:left;">
+        <h3 style="font-family:'Playfair Display',sans-serif; font-weight:800; color:#2D1810; margin-bottom:1rem; font-size:1.1rem;">🎁 E Ainda Leva Esses Bônus Exclusivos:</h3>
+        <div style="display:flex; flex-direction:column; gap:0.75rem;">
+          
+      <div style="display:flex; align-items:flex-start; gap:1rem; padding:1rem; background:#8B451311; border-radius:8px;">
+        <div style="background:#C41E3A; color:white; border-radius:50%; width:28px; height:28px; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:0.85rem; flex-shrink:0;">1</div>
+        <p style="color:#2D1810; margin:0; font-size:0.95rem; line-height:1.5;">FRETE GRÁTIS para todo o Brasil — o livro chega na sua porta sem você pagar nada a mais</p>
+      </div>
+
+      <div style="display:flex; align-items:flex-start; gap:1rem; padding:1rem; background:#8B451311; border-radius:8px;">
+        <div style="background:#C41E3A; color:white; border-radius:50%; width:28px; height:28px; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:0.85rem; flex-shrink:0;">2</div>
+        <p style="color:#2D1810; margin:0; font-size:0.95rem; line-height:1.5;">Acesso IMEDIATO à plataforma online — comece a estudar HOJE, antes mesmo do livro chegar na sua casa</p>
+      </div>
+
+      <div style="display:flex; align-items:flex-start; gap:1rem; padding:1rem; background:#8B451311; border-radius:8px;">
+        <div style="background:#C41E3A; color:white; border-radius:50%; width:28px; height:28px; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:0.85rem; flex-shrink:0;">3</div>
+        <p style="color:#2D1810; margin:0; font-size:0.95rem; line-height:1.5;">Curso de Pagode na Viola incluído — o estilo mais pedido pelos violeiros, que normalmente seria vendido separadamente</p>
+      </div>
+        </div>
+      </div>
+
+      <!-- Urgency -->
+      <div class="reveal" style="background:#C41E3A11; border:1px solid #C41E3A44; border-radius:12px; padding:1.25rem; margin-bottom:2rem;">
+        <p style="color:#C41E3A; font-weight:700; font-size:0.95rem;">⏰ Edição física limitada — quando o estoque atual acabar, nova tiragem só em 60-90 dias. E o bônus do frete grátis é válido apenas para esta remessa.</p>
+
+        
+      </div>
+
+      <!-- CTA Button -->
+      <a href="#" id="main-cta" class="pulse-cta" style="display:block; background:#C41E3A; color:white; padding:1.25rem 2rem; border-radius:14px; font-size:1.2rem; font-weight:900; text-decoration:none; transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+        🚀 QUERO MEU MANUAL DA VIOLA CAIPIRA COM FRETE GRÁTIS
+      </a>
+      <p style="color:#6B5344; font-size:0.82rem; margin-top:0.75rem;">Garantir Meu Livro Antes Que Acabe o Estoque</p>
+    </div>
+  </section>
+
+  <!-- GUARANTEE SECTION -->
+  <section id="garantia" style="padding:3.5rem 1.5rem; background:#FFFFFF;">
+    <div style="max-width:680px; margin:0 auto; text-align:center;">
+      <div class="reveal" style="background:#FDF8F3; border-radius:20px; padding:2.5rem; border:2px solid #228B2244; position:relative;">
+        <div style="font-size:3.5rem; margin-bottom:1rem;">🛡️</div>
+        <h2 style="font-size:1.75rem; font-weight:800; color:#228B22; margin-bottom:1rem;">Garantia Total</h2>
+        <p style="color:#6B5344; line-height:1.8; font-size:1rem;">GARANTIA INCONDICIONAL DE 7 DIAS: Receba o livro, folheie, escaneie os QR Codes, assista às aulas. Se por QUALQUER motivo você não gostar — pode ser o conteúdo, o papel, a cor da capa, o que for — devolvemos 100% do seu dinheiro. Sem perguntas constrangedoras, sem burocracia, sem letra miúda. Você não arrisca nem um centavo. O risco é todo nosso, porque sabemos o valor do que estamos entregando.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section id="faq" style="padding:4rem 1.5rem; background:#FDF8F3;">
+    <div style="max-width:740px; margin:0 auto;">
+      <h2 class="reveal" style="font-size:2rem; font-weight:800; text-align:center; margin-bottom:2.5rem;">
+        ❓ Perguntas Frequentes
+      </h2>
+      <div class="reveal" style="display:flex; flex-direction:column; gap:0.75rem;">
+        
+      <div class="faq-item" style="border:1px solid #8B451333; border-radius:10px; overflow:hidden;">
+        <button onclick="toggleFaq(0)" style="width:100%; text-align:left; padding:1.25rem 1.5rem; background:#FFFFFF; border:none; cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:1rem;">
+          <span style="font-family:'Playfair Display',sans-serif; font-weight:600; color:#2D1810; font-size:1rem;">Eu não entendo nada de tecnologia. Vou conseguir usar os QR Codes?</span>
+          <span id="faq-icon-0" style="color:#C41E3A; font-size:1.5rem; flex-shrink:0; transition:transform 0.3s;">+</span>
+        </button>
+        <div id="faq-0" style="display:none; padding:1.25rem 1.5rem; background:#FDF8F3; border-top:1px solid #8B451322;">
+          <p style="color:#6B5344; margin:0; line-height:1.7;">Se você consegue tirar foto com o celular, consegue usar. É literalmente apontar a câmera pro código e a aula abre sozinha. Não precisa baixar nada, não precisa de senha, não precisa de cadastro. Mais simples impossível.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" style="border:1px solid #8B451333; border-radius:10px; overflow:hidden;">
+        <button onclick="toggleFaq(1)" style="width:100%; text-align:left; padding:1.25rem 1.5rem; background:#FFFFFF; border:none; cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:1rem;">
+          <span style="font-family:'Playfair Display',sans-serif; font-weight:600; color:#2D1810; font-size:1rem;">Preciso de internet boa pra assistir as aulas?</span>
+          <span id="faq-icon-1" style="color:#C41E3A; font-size:1.5rem; flex-shrink:0; transition:transform 0.3s;">+</span>
+        </button>
+        <div id="faq-1" style="display:none; padding:1.25rem 1.5rem; background:#FDF8F3; border-top:1px solid #8B451322;">
+          <p style="color:#6B5344; margin:0; line-height:1.7;">As aulas são em vídeo, então precisa de internet pra assistir. Mas a boa notícia: você pode assistir quando tiver conexão e praticar depois com o livro em mãos, sem precisar de internet. Muitos alunos do interior fazem assim.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" style="border:1px solid #8B451333; border-radius:10px; overflow:hidden;">
+        <button onclick="toggleFaq(2)" style="width:100%; text-align:left; padding:1.25rem 1.5rem; background:#FFFFFF; border:none; cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:1rem;">
+          <span style="font-family:'Playfair Display',sans-serif; font-weight:600; color:#2D1810; font-size:1rem;">Nunca peguei numa viola. Esse método serve pra mim?</span>
+          <span id="faq-icon-2" style="color:#C41E3A; font-size:1.5rem; flex-shrink:0; transition:transform 0.3s;">+</span>
+        </button>
+        <div id="faq-2" style="display:none; padding:1.25rem 1.5rem; background:#FDF8F3; border-top:1px solid #8B451322;">
+          <p style="color:#6B5344; margin:0; line-height:1.7;">Serve sim! O curso começa do absoluto zero. Você vai aprender desde como segurar a viola, afinar, posicionar os dedos, até tocar músicas completas. Foi feito pensando em quem nunca tocou nenhum instrumento na vida.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" style="border:1px solid #8B451333; border-radius:10px; overflow:hidden;">
+        <button onclick="toggleFaq(3)" style="width:100%; text-align:left; padding:1.25rem 1.5rem; background:#FFFFFF; border:none; cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:1rem;">
+          <span style="font-family:'Playfair Display',sans-serif; font-weight:600; color:#2D1810; font-size:1rem;">Já toco um pouco de viola. O método vai me ajudar?</span>
+          <span id="faq-icon-3" style="color:#C41E3A; font-size:1.5rem; flex-shrink:0; transition:transform 0.3s;">+</span>
+        </button>
+        <div id="faq-3" style="display:none; padding:1.25rem 1.5rem; background:#FDF8F3; border-top:1px solid #8B451322;">
+          <p style="color:#6B5344; margin:0; line-height:1.7;">Com certeza! Além das 107 músicas pra aumentar seu repertório, o curso vai até o nível intermediário quase avançado. E ainda tem o curso de pagode na viola, que é o estilo mais pedido. Sempre tem algo novo pra aprender.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" style="border:1px solid #8B451333; border-radius:10px; overflow:hidden;">
+        <button onclick="toggleFaq(4)" style="width:100%; text-align:left; padding:1.25rem 1.5rem; background:#FFFFFF; border:none; cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:1rem;">
+          <span style="font-family:'Playfair Display',sans-serif; font-weight:600; color:#2D1810; font-size:1rem;">As aulas dos QR Codes podem ser canceladas ou expirar?</span>
+          <span id="faq-icon-4" style="color:#C41E3A; font-size:1.5rem; flex-shrink:0; transition:transform 0.3s;">+</span>
+        </button>
+        <div id="faq-4" style="display:none; padding:1.25rem 1.5rem; background:#FDF8F3; border-top:1px solid #8B451322;">
+          <p style="color:#6B5344; margin:0; line-height:1.7;">Não. As aulas ficam disponíveis permanentemente. O livro é seu e o acesso às aulas também. Não tem mensalidade, não tem renovação, não expira nunca.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" style="border:1px solid #8B451333; border-radius:10px; overflow:hidden;">
+        <button onclick="toggleFaq(5)" style="width:100%; text-align:left; padding:1.25rem 1.5rem; background:#FFFFFF; border:none; cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:1rem;">
+          <span style="font-family:'Playfair Display',sans-serif; font-weight:600; color:#2D1810; font-size:1rem;">Quanto tempo demora pra chegar?</span>
+          <span id="faq-icon-5" style="color:#C41E3A; font-size:1.5rem; flex-shrink:0; transition:transform 0.3s;">+</span>
+        </button>
+        <div id="faq-5" style="display:none; padding:1.25rem 1.5rem; background:#FDF8F3; border-top:1px solid #8B451322;">
+          <p style="color:#6B5344; margin:0; line-height:1.7;">Depende da sua região, mas geralmente entre 5 a 15 dias úteis. E aqui vai uma surpresa: você ganha acesso imediato à plataforma online pra começar a estudar HOJE, antes mesmo do livro chegar!</p>
+        </div>
+      </div>
+
+      <div class="faq-item" style="border:1px solid #8B451333; border-radius:10px; overflow:hidden;">
+        <button onclick="toggleFaq(6)" style="width:100%; text-align:left; padding:1.25rem 1.5rem; background:#FFFFFF; border:none; cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:1rem;">
+          <span style="font-family:'Playfair Display',sans-serif; font-weight:600; color:#2D1810; font-size:1rem;">E se eu não gostar do método?</span>
+          <span id="faq-icon-6" style="color:#C41E3A; font-size:1.5rem; flex-shrink:0; transition:transform 0.3s;">+</span>
+        </button>
+        <div id="faq-6" style="display:none; padding:1.25rem 1.5rem; background:#FDF8F3; border-top:1px solid #8B451322;">
+          <p style="color:#6B5344; margin:0; line-height:1.7;">Você tem 7 dias de garantia incondicional. Se não gostar por qualquer motivo, devolvemos 100% do seu dinheiro. Sem perguntas, sem burocracia. Simples assim.</p>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA SECTION -->
+  <section id="cta-final" style="padding:5rem 1.5rem; background: linear-gradient(135deg, #8B4513, #C41E3A); text-align:center;">
+    <div style="max-width:700px; margin:0 auto;">
+      <p class="fadeInUp" style="color:white; font-size:0.9rem; letter-spacing:0.1em; text-transform:uppercase; font-weight:600; margin-bottom:1rem; opacity:0.85;">Sua Transformação Começa Agora</p>
+      <h2 class="fadeInUp" style="font-size:2.5rem; font-weight:900; color:white; margin-bottom:1.25rem; line-height:1.2;" style="animation-delay:0.1s;">
+        Seu sonho não pode esperar mais.
+      </h2>
+      <a href="#oferta" style="display:inline-block; background:white; color:#8B4513; padding:1.15rem 2.5rem; border-radius:12px; font-size:1.1rem; font-weight:800; text-decoration:none; margin-top:1rem; transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='scale(1.04)';this.style.boxShadow='0 8px 24px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='scale(1)';this.style.boxShadow='none'">
+        👉 QUERO MEU MANUAL DA VIOLA CAIPIRA COM FRETE GRÁTIS
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background:#FDF8F3; border-top:1px solid #8B451322; padding:2rem 1.5rem; text-align:center;">
+    <p style="color:#6B5344; font-size:0.85rem;">&copy; 2026 Manual da Viola Caipira. Todos os direitos reservados.</p>
+    <p style="color:#6B5344; font-size:0.78rem; margin-top:0.4rem; opacity:0.6;">Gerado por Landing Pages Creator Pro • Powered by AIOX</p>
+  </footer>
+
+<script>
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); }
+    });
+  }, { threshold: 0.12 });
+  revealEls.forEach((el) => observer.observe(el));
+
+  // FAQ toggle
+  function toggleFaq(i) {
+    const el = document.getElementById('faq-' + i);
+    const icon = document.getElementById('faq-icon-' + i);
+    const isOpen = el.style.display !== 'none';
+    el.style.display = isOpen ? 'none' : 'block';
+    icon.textContent = isOpen ? '+' : '×';
+    icon.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(45deg)';
+  }
+
+  
+</script>
+</body>
+</html>
