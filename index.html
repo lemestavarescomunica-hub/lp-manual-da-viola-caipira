@@ -3,546 +3,341 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="O único método 3-em-1 do Brasil que transforma qualquer pessoa em violeiro respeitado: livro físico premium + 107 músicas cifradas + 2 cursos completos (do zero ao avançado + pagode) — tudo acessível por QR Code sem senha, sem plataforma, sem complicação" />
+  <meta name="description" content="O único método 3-em-1 do Brasil: livro físico premium + 107 músicas + 2 cursos completos via QR Code" />
   <title>Manual da Viola Caipira — Toque Viola Caipira em 30 Dias (Mesmo Começando do Zero)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@800;900&family=Noto+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: 'Inter', sans-serif;
-      font-size: 1.05rem;
-      line-height: 1.75;
-      background: #F9FAFB;
-      color: #1B2B5E;
-      -webkit-font-smoothing: antialiased;
-    }
-    h1,h2,h3,h4 { font-family: 'Montserrat', sans-serif; }
-
-    /* Reveal on scroll */
-    .lp-reveal { opacity:0; transform:translateY(24px); transition:opacity 0.6s ease, transform 0.6s ease; }
-    .lp-reveal.visible { opacity:1; transform:none; }
-
-    /* CTA pulse */
-    @keyframes lp-pulse { 0%,100%{box-shadow:0 0 0 0 #FFD70055;}50%{box-shadow:0 0 0 12px #FFD70000;} }
-    .lp-pulse-cta { animation: lp-pulse 2.2s infinite; }
-
-    /* Benefit grid */
-    .lp-benefits-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.25rem;
-    }
-    .lp-testimonials-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-      gap: 1.25rem;
-    }
-    /* Hero two-column */
-    .lp-hero-inner {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 3rem;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-    @media(min-width:768px) {
-      .lp-hero-inner { flex-direction: row; justify-content: space-between; align-items: center; }
-      .lp-hero-text { max-width: 55%; }
-    }
-    /* Author section two-column */
-    .lp-author-inner {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 2.5rem;
-      max-width: 940px;
-      margin: 0 auto;
-      text-align: center;
-    }
-    @media(min-width:768px) {
-      .lp-author-inner { flex-direction: row; text-align: left; }
-    }
-    /* Sticky header */
-    #lp-sticky-header { transition: background 0.3s; }
-    /* Section padding */
-    .lp-section { padding: 4.5rem 1.25rem; }
-    @media(min-width:640px) { .lp-section { padding: 5rem 2rem; } }
-    /* Max container */
-    .lp-container { max-width: 1100px; margin: 0 auto; }
-    .lp-container-sm { max-width: 760px; margin: 0 auto; }
-    .lp-container-md { max-width: 900px; margin: 0 auto; }
+    body { font-family: 'Noto Sans', sans-serif; background: #FFFEF7; color: #1B2B5E; scroll-behavior: smooth; }
+    h1, h2, h3, h4 { font-family: 'Be Vietnam Pro', sans-serif; }
+    .glass { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
   </style>
 </head>
-<body>
-
-  <!-- URGENCY BAR -->
-  <div style="background:#DC2626; color:#fff; text-align:center; padding:0.65rem 1rem; font-family:'Montserrat',sans-serif; font-size:0.88rem; font-weight:700; letter-spacing:0.03em; position:relative; z-index:50;">
-    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> &nbsp;⚠️ EDIÇÃO LIMITADA: Apenas 373 unidades restantes com frete grátis + 5 bônus inclusos
+<body class="antialiased overflow-x-hidden">
+  <div id="urgency-bar-wrapper" class="section-entry glass shadow-2xl rounded-[2rem] margin-6 p-4">
+    <div class="fixed top-0 left-0 right-0 z-[100] flex items-center justify-center gap-2 py-2 px-4 text-sm font-bold tracking-wide" style="background:#C62828; color:#fff">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> <span>⚠️ ÚLTIMAS UNIDADES: Frete Grátis e 5 Bônus exclusivos inclusos</span>
+    </div>
   </div>
-
-  <!-- STICKY HEADER -->
-  <header id="lp-sticky-header" style="position:sticky; top:0; z-index:40; background:#F9FAFBf0; backdrop-filter:blur(14px); border-bottom:1px solid #1B2B5E20; padding:0.9rem 1.25rem; display:flex; align-items:center; justify-content:space-between;">
-    <span style="font-family:'Montserrat',sans-serif; font-weight:900; color:#1B2B5E; font-size:1.05rem; letter-spacing:-0.01em;">Manual da Viola Caipira</span>
-    <a href="#oferta"
-    style="display:inline-block; background:#FFD700; color:#1B2B5E; padding:1.125rem 2.5rem; border-radius:8px; font-size:1.1rem; font-weight:800; box-shadow:0 4px 24px rgba(255, 215, 0, 0.4); text-decoration:none; letter-spacing:0.04em; transition:transform 0.18s,box-shadow 0.18s; font-size:0.88rem; padding:0.55rem 1.25rem;"
-    onmouseover="this.style.transform='scale(1.03)';this.style.boxShadow='0 8px 32px rgba(0,0,0,0.3)'"
-    onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 4px 24px rgba(255, 215, 0, 0.4)'"
-  >QUERO TOCAR VIOLA AGORA</a>
-  </header>
-
-  <!-- HERO -->
-  <section id="hero" class="lp-section" style="background:#F9FAFB;">
-    <div class="lp-hero-inner">
-      <div class="lp-hero-text">
-        <div class="lp-reveal" style="display:inline-block; background:#1B2B5E18; color:#1B2B5E; border-radius:999px; padding:0.35rem 1rem; font-size:0.82rem; font-weight:700; margin-bottom:1.25rem; border:1px solid #1B2B5E30; letter-spacing:0.05em; text-transform:uppercase;">
-          Aprenda viola caipira do jeito que seu avô aprendeu violão: com um livro na mão, músicas de verdade, e sem depender de internet, senha ou plataforma complicada — só você, sua viola e o QR Code.
-        </div>
-        <h1 class="lp-reveal" style="font-size:clamp(2.25rem, 5vw, 3.75rem); font-weight:900; line-height:1.12; margin-bottom:1.25rem; color:#1B2B5E; letter-spacing:-0.02em;">
-          Toque Viola Caipira em 30 Dias (Mesmo Começando do Zero)
-        </h1>
-        <p class="lp-reveal" style="font-size:1.15rem; color:#64748B; margin-bottom:1.5rem; line-height:1.7; max-width:540px;">
-          O único método 3-em-1 do Brasil que une livro físico + 107 músicas + 2 cursos completos. Sem senha, sem plataforma complicada — é só apontar o celular pro QR Code e aprender.
-        </p>
-        <p class="lp-reveal" style="color:#64748B; margin-bottom:2.25rem; max-width:520px;">
-          Imagine chegar no próximo churrasco de família, pegar a viola e arrancar aplausos tocando aquela música que seu avô cantava. Parece distante? Com o Manual da Viola Caipira, centenas de pessoas que nunca tinham tocado um instrumento já estão vivendo exatamente isso. E você pode ser o próximo — mesmo que ache que 'não tem jeito pra música'.
-        </p>
-        <div class="lp-reveal lp-pulse-cta">
-          <a href="#oferta"
-    style="display:inline-block; background:#FFD700; color:#1B2B5E; padding:1.125rem 2.5rem; border-radius:8px; font-size:1.1rem; font-weight:800; box-shadow:0 4px 24px rgba(255, 215, 0, 0.4); text-decoration:none; letter-spacing:0.04em; transition:transform 0.18s,box-shadow 0.18s; font-size:1.1rem;"
-    onmouseover="this.style.transform='scale(1.03)';this.style.boxShadow='0 8px 32px rgba(0,0,0,0.3)'"
-    onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 4px 24px rgba(255, 215, 0, 0.4)'"
-  >QUERO TOCAR VIOLA AGORA</a>
-        </div>
-        <p class="lp-reveal" style="color:#64748B; font-size:0.8rem; margin-top:0.85rem; display:flex; align-items:center; gap:0.35rem;">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#64748B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Garantia Incondicional de 30 Dias do Violeiro Satisfeito: Se em 30 dias você não estiver tocando pelo menos 3 músicas completas na viola, ou se por QUALQUER motivo achar que o método não é pra você, devolvemos 100% do seu dinheiro sem perguntas — e você ainda pode ficar com o livro físico como presente. Risco zero, decisão fácil.
-        </p>
-      </div>
-      <div class="lp-reveal" style="display:flex; justify-content:center; flex:1;">
-        <img src="./images/produto-livro.webp" alt="Imagem do produto" style="width:100%; max-width:480px; height:360px; object-fit:cover; border-radius:16px; box-shadow:0 24px 60px rgba(0,0,0,0.25);" loading="lazy" />
-      </div>
-    </div>
-  </section>
-
-  <!-- PROBLEM -->
-  <section id="problem" class="lp-section" style="background:#FFFFFF;">
-    <div class="lp-container-sm" style="text-align:center;">
-      <h2 class="lp-reveal" style="font-size:clamp(1.75rem,4vw,2.25rem); font-weight:900; margin-bottom:1rem; color:#1B2B5E;">
-        Sua viola tá juntando poeira no canto, não tá?
-      </h2>
-      <p class="lp-reveal" style="color:#64748B; max-width:640px; margin:0 auto 2.5rem;">
-        Você comprou com aquela empolgação, assistiu uns vídeos no YouTube... mas cada um ensina de um jeito diferente. Resultado? Confusão, frustração e a viola encostada no canto criando teia de aranha. E o pior: cada dia que passa, bate aquela vergonha de ter gastado dinheiro e não ter aprendido nada. Aquele sonho de tocar Almir Sater ou Tião Carreiro vai ficando cada vez mais distante. Mas não precisa ser assim.
-      </p>
-    </div>
-    <div class="lp-container" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1rem;">
-      <div class="lp-reveal" style="background:#F9FAFB; border-radius:10px; padding:1.25rem; border-left:3px solid #dc2626;">
-        <p style="font-weight:700; color:#dc2626; margin-bottom:0.5rem; font-size:0.9rem; text-transform:uppercase; letter-spacing:0.05em;">Agora</p>
-        <p style="color:#64748B; font-size:0.95rem;">Você comprou uma viola que está encostada no canto, tenta aprender pelo YouTube mas cada vídeo ensina diferente, e quando senta pra tocar não sai nada que preste — só frustração</p>
-      </div>
-      <div class="lp-reveal" style="background:#F9FAFB; border-radius:10px; padding:1.25rem; border-left:3px solid #ea580c;">
-        <p style="font-weight:700; color:#ea580c; margin-bottom:0.5rem; font-size:0.9rem; text-transform:uppercase; letter-spacing:0.05em;">No Futuro</p>
-        <p style="color:#64748B; font-size:0.95rem;">Cada mês que passa sem aprender, a viola junta mais poeira, a vergonha aumenta, e aquele sonho de tocar Almir Sater ou Tião Carreiro vai ficando mais distante até você desistir de vez</p>
-      </div>
-      <div class="lp-reveal" style="background:#F9FAFB; border-radius:10px; padding:1.25rem; border-left:3px solid #7c3aed;">
-        <p style="font-weight:700; color:#7c3aed; margin-bottom:0.5rem; font-size:0.9rem; text-transform:uppercase; letter-spacing:0.05em;">O Que Poucos Percebem</p>
-        <p style="color:#64748B; font-size:0.95rem;">No fundo você tem medo de não ter capacidade, de ser 'velho demais' pra aprender, e de gastar dinheiro em mais um curso que vai abandonar — e isso te paralisa</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- SOLUTION -->
-  <section id="solution" class="lp-section" style="background:#F9FAFB;">
-    <div class="lp-container-sm" style="text-align:center;">
-      <h2 class="lp-reveal" style="font-size:clamp(1.75rem,4vw,2.25rem); font-weight:900; margin-bottom:1rem; color:#1B2B5E;">
-        E se existisse um método simples como antigamente?
-      </h2>
-      <p class="lp-reveal" style="color:#64748B; margin-bottom:2rem; max-width:640px; margin-left:auto; margin-right:auto;">
-        Seu avô não precisou de plataforma online pra aprender violão. Ele pegou um método, praticou e aprendeu. O Manual da Viola Caipira traz essa simplicidade de volta: um livro físico de verdade, com músicas reais pra tocar, e quando precisar ver como faz — é só apontar o celular pro QR Code. Sem login, sem senha, sem complicação. Você, sua viola e o conhecimento na palma da mão.
-      </p>
-      <blockquote class="lp-reveal" style="background:#FFFFFF; border-left:4px solid #FFD700; border-radius:0 12px 12px 0; padding:1.75rem 2rem; text-align:left; max-width:640px; margin:0 auto; color:#64748B; font-style:italic; line-height:1.8;">
-        O João tinha 58 anos e uma viola encostada há 3 anos. 'Comprei num impulso, mas nunca aprendi'. Ele achava que era velho demais, que não tinha talento. Quando conheceu o Manual, desconfiou: 'Mais um curso que vou abandonar'. Mas a simplicidade do QR Code e o método passo-a-passo mudaram tudo. Em 30 dias, João tocou 'Romaria' completa no aniversário da mãe dele de 82 anos. 'Foi a primeira vez que vi minha mãe chorar de alegria por minha causa'. Hoje João é 'o violeiro' da família — e ensina os netos.
-      </blockquote>
-    </div>
-  </section>
-
-  <!-- BENEFITS -->
-  <section id="benefits" class="lp-section" style="background:#FFFFFF;">
-    <div class="lp-container">
-      <h2 class="lp-reveal" style="font-size:clamp(1.75rem,4vw,2.25rem); font-weight:900; text-align:center; margin-bottom:2.5rem; color:#1B2B5E;">
-        O Que Voce Vai Conquistar
-      </h2>
-      <div class="lp-benefits-grid lp-reveal">
-        
-    <div style="background:#FFFFFF; border:1px solid #1B2B5E22; border-radius:12px; padding:1.5rem; display:flex; flex-direction:column; gap:0.75rem; transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'">
-      <div style="width:42px; height:42px; background:#1B2B5E18; border-radius:10px; display:flex; align-items:center; justify-content:center; color:#FFD700;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFD700" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-      <h3 style="font-family:'Montserrat',sans-serif; font-weight:700; color:#1B2B5E; font-size:1.05rem; margin:0;">Livro Físico Premium</h3>
-      <p style="color:#64748B; font-size:0.95rem; margin:0; line-height:1.75;">Método passo-a-passo que você pode folhear, rabiscar e levar pra qualquer lugar — sem depender de internet ou bateria.</p>
-    </div>
-
-    <div style="background:#FFFFFF; border:1px solid #1B2B5E22; border-radius:12px; padding:1.5rem; display:flex; flex-direction:column; gap:0.75rem; transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'">
-      <div style="width:42px; height:42px; background:#1B2B5E18; border-radius:10px; display:flex; align-items:center; justify-content:center; color:#FFD700;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFD700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
-      <h3 style="font-family:'Montserrat',sans-serif; font-weight:700; color:#1B2B5E; font-size:1.05rem; margin:0;">107 Músicas Cifradas</h3>
-      <p style="color:#64748B; font-size:0.95rem; margin:0; line-height:1.75;">Do sertanejo raiz ao pagode de viola, todas as músicas que fazem uma roda pegar fogo estão aqui, organizadas por nível.</p>
-    </div>
-
-    <div style="background:#FFFFFF; border:1px solid #1B2B5E22; border-radius:12px; padding:1.5rem; display:flex; flex-direction:column; gap:0.75rem; transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'">
-      <div style="width:42px; height:42px; background:#1B2B5E18; border-radius:10px; display:flex; align-items:center; justify-content:center; color:#FFD700;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFD700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
-      <h3 style="font-family:'Montserrat',sans-serif; font-weight:700; color:#1B2B5E; font-size:1.05rem; margin:0;">QR Code Sem Complicação</h3>
-      <p style="color:#64748B; font-size:0.95rem; margin:0; line-height:1.75;">Apontou o celular, apareceu o vídeo. Sem criar conta, sem lembrar senha, sem plataforma travando. Simples assim.</p>
-    </div>
-
-    <div style="background:#FFFFFF; border:1px solid #1B2B5E22; border-radius:12px; padding:1.5rem; display:flex; flex-direction:column; gap:0.75rem; transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'">
-      <div style="width:42px; height:42px; background:#1B2B5E18; border-radius:10px; display:flex; align-items:center; justify-content:center; color:#FFD700;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFD700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
-      <h3 style="font-family:'Montserrat',sans-serif; font-weight:700; color:#1B2B5E; font-size:1.05rem; margin:0;">Do Zero ao Avançado</h3>
-      <p style="color:#64748B; font-size:0.95rem; margin:0; line-height:1.75;">Nunca pegou numa viola? Perfeito. O método te leva do primeiro acorde até técnicas de ponteio que impressionam qualquer um.</p>
-    </div>
-
-    <div style="background:#FFFFFF; border:1px solid #1B2B5E22; border-radius:12px; padding:1.5rem; display:flex; flex-direction:column; gap:0.75rem; transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'">
-      <div style="width:42px; height:42px; background:#1B2B5E18; border-radius:10px; display:flex; align-items:center; justify-content:center; color:#FFD700;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FFD700" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-      <h3 style="font-family:'Montserrat',sans-serif; font-weight:700; color:#1B2B5E; font-size:1.05rem; margin:0;">Curso de Pagode Incluso</h3>
-      <p style="color:#64748B; font-size:0.95rem; margin:0; line-height:1.75;">O ritmo que faz qualquer roda explodir de alegria, ensinado do zero — esse curso sozinho vale R$297.</p>
-    </div>
-
-    <div style="background:#FFFFFF; border:1px solid #1B2B5E22; border-radius:12px; padding:1.5rem; display:flex; flex-direction:column; gap:0.75rem; transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'">
-      <div style="width:42px; height:42px; background:#1B2B5E18; border-radius:10px; display:flex; align-items:center; justify-content:center; color:#FFD700;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFD700" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
-      <h3 style="font-family:'Montserrat',sans-serif; font-weight:700; color:#1B2B5E; font-size:1.05rem; margin:0;">Funciona em Qualquer Idade</h3>
-      <p style="color:#64748B; font-size:0.95rem; margin:0; line-height:1.75;">Temos alunos de 15 a 75 anos tocando. Não existe 'velho demais' — existe método certo ou método errado.</p>
-    </div>
-
-    <div style="background:#FFFFFF; border:1px solid #1B2B5E22; border-radius:12px; padding:1.5rem; display:flex; flex-direction:column; gap:0.75rem; transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'">
-      <div style="width:42px; height:42px; background:#1B2B5E18; border-radius:10px; display:flex; align-items:center; justify-content:center; color:#FFD700;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFD700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg></div>
-      <h3 style="font-family:'Montserrat',sans-serif; font-weight:700; color:#1B2B5E; font-size:1.05rem; margin:0;">Resultados em 7 Dias</h3>
-      <p style="color:#64748B; font-size:0.95rem; margin:0; line-height:1.75;">Com apenas 20 minutos por dia, você já toca sua primeira música completa na primeira semana.</p>
-    </div>
-
-    <div style="background:#FFFFFF; border:1px solid #1B2B5E22; border-radius:12px; padding:1.5rem; display:flex; flex-direction:column; gap:0.75rem; transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'">
-      <div style="width:42px; height:42px; background:#1B2B5E18; border-radius:10px; display:flex; align-items:center; justify-content:center; color:#FFD700;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFD700" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-      <h3 style="font-family:'Montserrat',sans-serif; font-weight:700; color:#1B2B5E; font-size:1.05rem; margin:0;">Vire 'O Cara da Viola'</h3>
-      <p style="color:#64748B; font-size:0.95rem; margin:0; line-height:1.75;">Aquele reconhecimento nos churrascos, festas e reuniões de família — você vai conquistar com suas próprias mãos.</p>
-    </div>
-      </div>
-      <div class="lp-reveal" style="text-align:center; margin-top:2.5rem;">
-        <a href="#oferta"
-    style="display:inline-block; background:#FFD700; color:#1B2B5E; padding:1.125rem 2.5rem; border-radius:8px; font-size:1.1rem; font-weight:800; box-shadow:0 4px 24px rgba(255, 215, 0, 0.4); text-decoration:none; letter-spacing:0.04em; transition:transform 0.18s,box-shadow 0.18s; "
-    onmouseover="this.style.transform='scale(1.03)';this.style.boxShadow='0 8px 32px rgba(0,0,0,0.3)'"
-    onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 4px 24px rgba(255, 215, 0, 0.4)'"
-  >QUERO TOCAR VIOLA AGORA</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- SOCIAL PROOF -->
-  <section id="social-proof" class="lp-section" style="background:#F9FAFB;">
-    <div class="lp-container">
-      <h2 class="lp-reveal" style="font-size:clamp(1.75rem,4vw,2.25rem); font-weight:900; text-align:center; margin-bottom:0.5rem; color:#1B2B5E;">
-        Quem Ja Transformou Sua Vida
-      </h2>
-      <p class="lp-reveal" style="text-align:center; color:#64748B; margin-bottom:2.5rem;">Resultados reais de pessoas reais</p>
-      <div class="lp-testimonials-grid lp-reveal">
-        
-    <div style="background:#FFFFFF; border-radius:14px; padding:1.75rem; display:flex; flex-direction:column; gap:1rem; border:1px solid #1B2B5E18;">
-      <div style="display:flex; gap:2px;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FFD700" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FFD700" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FFD700" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FFD700" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FFD700" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-      <p style="color:#1B2B5E; font-size:1.05rem; margin:0; line-height:1.75; font-style:italic;">"Eu achava que viola era só pra quem aprendeu de criança. Com 62 anos, em 3 semanas já tava tocando Chitãozinho e Xororó no churrasco de domingo. Meus filhos não acreditaram! O método é tão simples que até eu — que mal sei mexer no celular — consegui usar o QR Code sem problema nenhum."</p>
-      <div style="border-top:1px solid #1B2B5E18; padding-top:1rem; display:flex; align-items:center; gap:0.75rem;">
-        <div style="width:42px; height:42px; border-radius:50%; background:#1B2B5E22; color:#1B2B5E; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:1rem; flex-shrink:0; overflow:hidden;"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1B2B5E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
-        <div>
-          <p style="font-weight:700; color:#1B2B5E; margin:0; font-size:0.95rem;">Carlos Eduardo, 62 anos</p>
-          <p style="color:#64748B; font-size:0.82rem; margin:0;">Aposentado de Ribeirão Preto/SP</p>
-        </div>
-      </div>
-      <div style="background:#05966918; border-radius:8px; padding:0.5rem 0.75rem; color:#059669; font-weight:700; font-size:0.88rem; display:flex; align-items:center; gap:0.4rem;">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Tocando 5 músicas completas em 30 dias
-      </div>
-    </div>
-
-    <div style="background:#FFFFFF; border-radius:14px; padding:1.75rem; display:flex; flex-direction:column; gap:1rem; border:1px solid #1B2B5E18;">
-      <div style="display:flex; gap:2px;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FFD700" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FFD700" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FFD700" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FFD700" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FFD700" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-      <p style="color:#1B2B5E; font-size:1.05rem; margin:0; line-height:1.75; font-style:italic;">"Meu marido tocava viola e partiu há 2 anos. Decidi aprender pra manter a memória dele viva. Chorei quando consegui tocar 'Tristeza do Jeca' — era a preferida dele. O livro é lindo, e os vídeos pelo QR Code explicam tim-tim por tim-tim. Não precisa ser gênio, só precisa seguir o passo-a-passo."</p>
-      <div style="border-top:1px solid #1B2B5E18; padding-top:1rem; display:flex; align-items:center; gap:0.75rem;">
-        <div style="width:42px; height:42px; border-radius:50%; background:#1B2B5E22; color:#1B2B5E; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:1rem; flex-shrink:0; overflow:hidden;"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1B2B5E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
-        <div>
-          <p style="font-weight:700; color:#1B2B5E; margin:0; font-size:0.95rem;">Dona Marlene, 67 anos</p>
-          <p style="color:#64748B; font-size:0.82rem; margin:0;">Professora aposentada de Goiânia/GO</p>
-        </div>
-      </div>
-      <div style="background:#05966918; border-radius:8px; padding:0.5rem 0.75rem; color:#059669; font-weight:700; font-size:0.88rem; display:flex; align-items:center; gap:0.4rem;">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> De nunca ter tocado para apresentar na igreja em 45 dias
-      </div>
-    </div>
-
-    <div style="background:#FFFFFF; border-radius:14px; padding:1.75rem; display:flex; flex-direction:column; gap:1rem; border:1px solid #1B2B5E18;">
-      <div style="display:flex; gap:2px;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FFD700" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FFD700" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FFD700" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FFD700" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FFD700" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-      <p style="color:#1B2B5E; font-size:1.05rem; margin:0; line-height:1.75; font-style:italic;">"Tentei YouTube por 1 ano e não saía do lugar. Em 2 semanas com o Manual eu evolui mais do que em 12 meses sozinho. O segredo é a ordem certa das coisas — o método não te deixa pular etapas. Hoje toco pagode de viola e sou a atração dos churrascos da firma!"</p>
-      <div style="border-top:1px solid #1B2B5E18; padding-top:1rem; display:flex; align-items:center; gap:0.75rem;">
-        <div style="width:42px; height:42px; border-radius:50%; background:#1B2B5E22; color:#1B2B5E; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:1rem; flex-shrink:0; overflow:hidden;"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1B2B5E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
-        <div>
-          <p style="font-weight:700; color:#1B2B5E; margin:0; font-size:0.95rem;">Rafael Santos, 34 anos</p>
-          <p style="color:#64748B; font-size:0.82rem; margin:0;">Engenheiro de Belo Horizonte/MG</p>
-        </div>
-      </div>
-      <div style="background:#05966918; border-radius:8px; padding:0.5rem 0.75rem; color:#059669; font-weight:700; font-size:0.88rem; display:flex; align-items:center; gap:0.4rem;">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Saiu do zero para tocar pagode em 14 dias
-      </div>
-    </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- AUTHOR -->
-  <section id="author" class="lp-section" style="background:#FFFFFF;">
-    <div class="lp-author-inner">
-      <div class="lp-reveal" style="display:flex; justify-content:center;">
-        <img src="./images/professor%20paulo%20com%20a%20viola.webp" alt="Foto do autor" style="width:220px; height:220px; object-fit:cover; border-radius:50%; border:4px solid #FFD700; box-shadow:0 8px 32px rgba(0,0,0,0.2); flex-shrink:0;" loading="lazy" />
-      </div>
-      <div class="lp-reveal">
-        <p style="font-size:0.82rem; font-weight:700; color:#FFD700; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:0.75rem;">Quem esta por tras disso</p>
-        <h2 style="font-size:clamp(1.5rem,3.5vw,2rem); font-weight:900; margin-bottom:1.25rem; color:#1B2B5E;">Sobre o Criador do Manual da Viola Caipira</h2>
-        <p style="color:#64748B; line-height:1.8; margin-bottom:1.5rem;">Imagine chegar no próximo churrasco de família, pegar a viola e arrancar aplausos tocando aquela música que seu avô cantava. Parece distante? Com o Manual da Viola Caipira, centenas de pessoas que nunca tinham tocado um instrumento já estão vivendo exatamente isso. E você pode ser o próximo — mesmo que ache que 'não tem jeito pra música'.</p>
-        <p style="color:#64748B; font-style:italic;">O único método 3-em-1 do Brasil que transforma qualquer pessoa em violeiro respeitado: livro físico premium + 107 músicas cifradas + 2 cursos completos (do zero ao avançado + pagode) — tudo acessível por QR Code sem senha, sem plataforma, sem complicação</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- OFFER -->
-  <section id="oferta" class="lp-section" style="background:linear-gradient(135deg,#1B2B5E18 0%,#FFD70014 100%);">
-    <div class="lp-container-md" style="text-align:center;">
-      <h2 class="lp-reveal" style="font-size:clamp(1.75rem,4vw,2.25rem); font-weight:900; margin-bottom:0.75rem; color:#1B2B5E;">
-        Tudo Isso Por Menos do Que Uma Aula Particular
-      </h2>
-      <p class="lp-reveal" style="color:#64748B; margin-bottom:2rem;">Se você fosse comprar cada parte separadamente, pagaria mais de R$1.200. Mas hoje, na edição limitada de lançamento, você leva tudo por uma fração desse valor:</p>
-
-      <div class="lp-reveal" style="margin-bottom:1.75rem;">
-        <img src="./images/produto-livro.webp" alt="Produto em destaque" style="width:100%; max-width:380px; height:280px; object-fit:cover; border-radius:16px; box-shadow:0 16px 48px rgba(0,0,0,0.3); margin:0 auto; display:block;" loading="lazy" />
-      </div>
-
-      <!-- Price Box -->
-      <div class="lp-reveal" style="background:#FFFFFF; border-radius:18px; padding:2rem; margin-bottom:1.5rem; border:2px solid #FFD70044; max-width:560px; margin-left:auto; margin-right:auto;">
-        <p style="color:#64748B; text-decoration:line-through; font-size:1rem; margin-bottom:0.25rem; opacity:0.7;">De R$1.291 (valor real: Livro R$197 + Curso Completo R$497 + Curso de Pagode R$297 + Bônus R$300)</p>
-        <p style="font-size:clamp(2.5rem,8vw,3.5rem); font-weight:900; color:#FFD700; line-height:1; margin-bottom:0.35rem; font-family:'Montserrat',sans-serif;">R$297 em até 12x de R$29,67</p>
-        <p style="color:#059669; font-weight:700; font-size:0.9rem; margin-bottom:1.5rem;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Economia de R$994 (77% de desconto) + Frete Grátis para todo Brasil</p>
-
-        <!-- Bonuses -->
-        <div style="text-align:left; margin-bottom:1.5rem;">
-          <h3 style="font-family:'Montserrat',sans-serif; font-weight:800; color:#1B2B5E; margin-bottom:1rem; font-size:1rem;">E Ainda Leva 5 Bônus Exclusivos (Só Nesta Edição):</h3>
-          <div style="display:flex; flex-direction:column; gap:0.65rem;">
-            
-    <div style="display:flex; align-items:flex-start; gap:1rem; padding:0.9rem; background:#1B2B5E0E; border-radius:8px;">
-      <div style="background:#FFD700; color:#1B2B5E; border-radius:6px; width:26px; height:26px; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:0.82rem; flex-shrink:0;">1</div>
-      <p style="color:#1B2B5E; margin:0; font-size:0.95rem; line-height:1.55;">BÔNUS #1: Curso Exclusivo de Pagode de Viola (R$297 de valor) — o ritmo que faz qualquer roda de viola pegar fogo, ensinado do zero</p>
-    </div>
-
-    <div style="display:flex; align-items:flex-start; gap:1rem; padding:0.9rem; background:#1B2B5E0E; border-radius:8px;">
-      <div style="background:#FFD700; color:#1B2B5E; border-radius:6px; width:26px; height:26px; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:0.82rem; flex-shrink:0;">2</div>
-      <p style="color:#1B2B5E; margin:0; font-size:0.95rem; line-height:1.55;">BÔNUS #2: Guia de Afinação Perfeita + Afinador Digital via QR Code — nunca mais passe vergonha com viola desafinada</p>
-    </div>
-
-    <div style="display:flex; align-items:flex-start; gap:1rem; padding:0.9rem; background:#1B2B5E0E; border-radius:8px;">
-      <div style="background:#FFD700; color:#1B2B5E; border-radius:6px; width:26px; height:26px; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:0.82rem; flex-shrink:0;">3</div>
-      <p style="color:#1B2B5E; margin:0; font-size:0.95rem; line-height:1.55;">BÔNUS #3: Repertório de Ouro do Violeiro — 15 músicas 'coringa' que impressionam em qualquer situação, com cifra simplificada para tocar em 7 dias</p>
-    </div>
-
-    <div style="display:flex; align-items:flex-start; gap:1rem; padding:0.9rem; background:#1B2B5E0E; border-radius:8px;">
-      <div style="background:#FFD700; color:#1B2B5E; border-radius:6px; width:26px; height:26px; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:0.82rem; flex-shrink:0;">4</div>
-      <p style="color:#1B2B5E; margin:0; font-size:0.95rem; line-height:1.55;">BÔNUS #4: Acesso ao Grupo VIP de Violeiros no WhatsApp/Telegram — tire dúvidas, compartilhe evolução e encontre parceiros de viola na sua região</p>
-    </div>
-
-    <div style="display:flex; align-items:flex-start; gap:1rem; padding:0.9rem; background:#1B2B5E0E; border-radius:8px;">
-      <div style="background:#FFD700; color:#1B2B5E; border-radius:6px; width:26px; height:26px; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:0.82rem; flex-shrink:0;">5</div>
-      <p style="color:#1B2B5E; margin:0; font-size:0.95rem; line-height:1.55;">BÔNUS #5: Certificado Digital de Conclusão — para quem quer dar aulas ou comprovar conhecimento</p>
-    </div>
+<div id="hero-wrapper" class="section-entry glass shadow-2xl rounded-[2rem] margin-6 p-4">
+    <section class="relative overflow-hidden pt-32 pb-20 lg:pt-48 lg:pb-32" style="background:#FFFEF7">
+      <div class="absolute inset-0 z-0 opacity-20" style="background: radial-gradient(circle at 50% 50%, #1B2B5E44 0%, transparent 70%)"></div>
+      <div class="container mx-auto px-6 relative z-10">
+        <div class="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-16">
+          <div class="lg:w-3/5 text-center lg:text-left">
+            <span class="inline-block px-4 py-1 rounded-full text-xs font-black uppercase tracking-widest mb-6 border" style="background:#1B2B5E15; color:#1B2B5E; border-color:#1B2B5E30">A Tradição do Violeiro na Palma da Mão</span>
+            <h1 class="text-5xl lg:text-7xl font-black mb-8 leading-[1.1] tracking-tight" style="color:#1B2B5E; font-family:'Be Vietnam Pro';">
+              Toque Viola Caipira em 30 Dias (Mesmo Começando do Zero)
+            </h1>
+            <p class="text-xl lg:text-2xl mb-10 opacity-80 leading-relaxed max-w-2xl mx-auto lg:mx-0" style="color:#5C5C5C">
+              O único método 3-em-1 do Brasil que une livro físico + 107 músicas + 2 cursos completos. Sem senha, sem plataforma complicada.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
+              <a href="#oferta" 
+    class="inline-block transform transition-all duration-300 hover:scale-[1.03] active:scale-95 text-center w-full sm:w-auto px-10 py-5 text-lg shadow-2xl"
+    style="background:#FFD700; color:#1B2B5E; padding:1rem 2rem; border-radius:2rem; font-size:1.1rem; font-weight:900; box-shadow:0 10px 30px -5px rgba(27, 43, 94, 0.3);"
+  >QUERO MEU MANUAL AGORA</a>
+              <div class="flex flex-col items-center lg:items-start ml-4">
+                 <div class="flex text-amber-400 mb-1 leading-none"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+                 <span class="text-xs opacity-60 uppercase font-bold tracking-tighter" style="color:#1B2B5E">+ de 5.000 vidas transformadas</span>
+              </div>
+            </div>
+          </div>
+          <div class="lg:w-2/5 w-full">
+            <div class="relative group">
+              <div class="absolute -inset-1 bg-gradient-to-r from-#1B2B5E to-#8B4513 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+              <img src="./images/produto-livro.webp" alt="undefined" class="w-full relative rounded-2xl shadow-2xl border-4 border-white/10" loading="lazy" />
+            </div>
           </div>
         </div>
-
-        <!-- Urgency -->
-        <div style="background:#DC262618; border:1px solid #DC262644; border-radius:10px; padding:0.9rem 1rem; margin-bottom:1.5rem; display:flex; align-items:center; justify-content:center; gap:0.5rem; color:#DC2626; font-weight:700; font-size:0.9rem;">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Edição Limitada de Lançamento: apenas 500 unidades com os 5 bônus inclusos e frete grátis. Após esgotar, os bônus serão vendidos separadamente (R$497) e o frete volta ao normal. 127 unidades já foram vendidas nas últimas 48h.
+      </div>
+    </section>
+  </div>
+<div id="problem-wrapper" class="section-entry glass shadow-2xl rounded-[2rem] margin-6 p-4">
+    <section class="relative overflow-hidden pt-32 pb-20 lg:pt-48 lg:pb-32" style="background:#FFFEF7">
+      <div class="absolute inset-0 z-0 opacity-20" style="background: radial-gradient(circle at 50% 50%, #1B2B5E44 0%, transparent 70%)"></div>
+      <div class="container mx-auto px-6 relative z-10">
+        <div class="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-16">
+          <div class="lg:w-3/5 text-center lg:text-left">
+            <span class="inline-block px-4 py-1 rounded-full text-xs font-black uppercase tracking-widest mb-6 border" style="background:#1B2B5E15; color:#1B2B5E; border-color:#1B2B5E30">A Tradição do Violeiro na Palma da Mão</span>
+            <h1 class="text-5xl lg:text-7xl font-black mb-8 leading-[1.1] tracking-tight" style="color:#1B2B5E; font-family:'Be Vietnam Pro';">
+              Toque Viola Caipira em 30 Dias (Mesmo Começando do Zero)
+            </h1>
+            <p class="text-xl lg:text-2xl mb-10 opacity-80 leading-relaxed max-w-2xl mx-auto lg:mx-0" style="color:#5C5C5C">
+              O único método 3-em-1 do Brasil que une livro físico + 107 músicas + 2 cursos completos. Sem senha, sem plataforma complicada.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
+              <a href="#oferta" 
+    class="inline-block transform transition-all duration-300 hover:scale-[1.03] active:scale-95 text-center w-full sm:w-auto px-10 py-5 text-lg shadow-2xl"
+    style="background:#FFD700; color:#1B2B5E; padding:1rem 2rem; border-radius:2rem; font-size:1.1rem; font-weight:900; box-shadow:0 10px 30px -5px rgba(27, 43, 94, 0.3);"
+  >QUERO MEU MANUAL AGORA</a>
+              <div class="flex flex-col items-center lg:items-start ml-4">
+                 <div class="flex text-amber-400 mb-1 leading-none"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+                 <span class="text-xs opacity-60 uppercase font-bold tracking-tighter" style="color:#1B2B5E">+ de 5.000 vidas transformadas</span>
+              </div>
+            </div>
+          </div>
+          <div class="lg:w-2/5 w-full">
+            <div class="relative group">
+              <div class="absolute -inset-1 bg-gradient-to-r from-#1B2B5E to-#8B4513 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+              <img src="./images/produto-livro.webp" alt="undefined" class="w-full relative rounded-2xl shadow-2xl border-4 border-white/10" loading="lazy" />
+            </div>
+          </div>
         </div>
-
-        <!-- Countdown -->
-        <div id="lp-countdown" style="display:flex; justify-content:center; gap:1rem; margin-bottom:1.75rem;">
+      </div>
+    </section>
+  </div>
+<div id="solution-wrapper" class="section-entry glass shadow-2xl rounded-[2rem] margin-6 p-4">
+    <section class="py-24" style="background:#FFFEF7">
+      <div class="container mx-auto px-6 text-center max-w-4xl">
+        <h2 class="text-3xl lg:text-5xl font-black mb-8" style="color:#1B2B5E">A Simplicidade de Antigamente com a Tecnologia de Hoje</h2>
+        <p class="text-xl opacity-80 leading-relaxed mb-12" style="color:#5C5C5C">Um livro físico de verdade para você folhear, e QR Codes para ver as aulas na hora. Sem login, sem senha, sem estresse.</p>
+        <div class="p-10 rounded-[32px] text-left border-l-8 italic shadow-xl bg-white" style="border-color:#8B4513">
+          <p class="text-lg leading-loose text-slate-600">"O João tinha 58 anos e uma viola encostada há 3 anos. 'Comprei num impulso, mas nunca aprendi'. Hoje ele é 'o violeiro' da família."</p>
+        </div>
+      </div>
+    </section>
+  </div>
+<div id="benefits-wrapper" class="section-entry glass shadow-2xl rounded-[2rem] margin-6 p-4">
+    <section class="relative overflow-hidden pt-32 pb-20 lg:pt-48 lg:pb-32" style="background:#FFFEF7">
+      <div class="absolute inset-0 z-0 opacity-20" style="background: radial-gradient(circle at 50% 50%, #1B2B5E44 0%, transparent 70%)"></div>
+      <div class="container mx-auto px-6 relative z-10">
+        <div class="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-16">
+          <div class="lg:w-3/5 text-center lg:text-left">
+            <span class="inline-block px-4 py-1 rounded-full text-xs font-black uppercase tracking-widest mb-6 border" style="background:#1B2B5E15; color:#1B2B5E; border-color:#1B2B5E30">A Tradição do Violeiro na Palma da Mão</span>
+            <h1 class="text-5xl lg:text-7xl font-black mb-8 leading-[1.1] tracking-tight" style="color:#1B2B5E; font-family:'Be Vietnam Pro';">
+              Toque Viola Caipira em 30 Dias (Mesmo Começando do Zero)
+            </h1>
+            <p class="text-xl lg:text-2xl mb-10 opacity-80 leading-relaxed max-w-2xl mx-auto lg:mx-0" style="color:#5C5C5C">
+              O único método 3-em-1 do Brasil que une livro físico + 107 músicas + 2 cursos completos. Sem senha, sem plataforma complicada.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
+              <a href="#oferta" 
+    class="inline-block transform transition-all duration-300 hover:scale-[1.03] active:scale-95 text-center w-full sm:w-auto px-10 py-5 text-lg shadow-2xl"
+    style="background:#FFD700; color:#1B2B5E; padding:1rem 2rem; border-radius:2rem; font-size:1.1rem; font-weight:900; box-shadow:0 10px 30px -5px rgba(27, 43, 94, 0.3);"
+  >QUERO MEU MANUAL AGORA</a>
+              <div class="flex flex-col items-center lg:items-start ml-4">
+                 <div class="flex text-amber-400 mb-1 leading-none"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+                 <span class="text-xs opacity-60 uppercase font-bold tracking-tighter" style="color:#1B2B5E">+ de 5.000 vidas transformadas</span>
+              </div>
+            </div>
+          </div>
+          <div class="lg:w-2/5 w-full">
+            <div class="relative group">
+              <div class="absolute -inset-1 bg-gradient-to-r from-#1B2B5E to-#8B4513 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+              <img src="./images/produto-livro.webp" alt="undefined" class="w-full relative rounded-2xl shadow-2xl border-4 border-white/10" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+<div id="social-proof-wrapper" class="section-entry glass shadow-2xl rounded-[2rem] margin-6 p-4">
+    <section class="py-24 bg-slate-50" style="background:#F5F1E8">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl lg:text-5xl font-black mb-16 text-center" style="color:#1B2B5E">QUEM JÁ TEVE RESULTADOS</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           
-          <div style="text-align:center;">
-            <div id="lp-hours" style="font-family:'Montserrat',sans-serif; font-size:2rem; font-weight:900; color:#FFD700; min-width:2.5rem; display:block;">00</div>
-            <div style="font-size:0.72rem; color:#64748B; text-transform:uppercase; letter-spacing:0.05em;">horas</div>
-          </div>
-          <div style="font-family:'Montserrat',sans-serif; font-size:2rem; font-weight:900; color:#FFD700; padding-top:2px;">:</div>
-          <div style="text-align:center;">
-            <div id="lp-minutes" style="font-family:'Montserrat',sans-serif; font-size:2rem; font-weight:900; color:#FFD700; min-width:2.5rem; display:block;">00</div>
-            <div style="font-size:0.72rem; color:#64748B; text-transform:uppercase; letter-spacing:0.05em;">min</div>
-          </div>
-          <div style="font-family:'Montserrat',sans-serif; font-size:2rem; font-weight:900; color:#FFD700; padding-top:2px;">:</div>
-          <div style="text-align:center;">
-            <div id="lp-seconds" style="font-family:'Montserrat',sans-serif; font-size:2rem; font-weight:900; color:#FFD700; min-width:2.5rem; display:block;">00</div>
-            <div style="font-size:0.72rem; color:#64748B; text-transform:uppercase; letter-spacing:0.05em;">seg</div>
-          </div>
+            <div class="bg-white p-8 rounded-3xl shadow-lg border border-slate-100 flex flex-col gap-6">
+              <div class="flex text-amber-400"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+              <img src="./images/depoimeto%2001.webp" class="w-full h-48 object-cover rounded-2xl mb-2" />
+              <p class="text-slate-700 italic flex-grow">"Em 3 semanas já estava tocando Chitãozinho e Xororó no churrasco da família. O QR Code é uma benção!"</p>
+              <div class="flex items-center gap-4 pt-6 border-t border-slate-100">
+                <div class="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 overflow-hidden">
+                  <img src="./images/depoimeto%2001.webp" class="w-full h-full object-cover" />
+                </div>
+                <div>
+                   <p class="font-bold text-slate-900">José Aparecido</p>
+                   <p class="text-xs text-emerald-500 font-black uppercase tracking-widest">Tocando em 21 dias</p>
+                </div>
+              </div>
+            </div>
+          
+            <div class="bg-white p-8 rounded-3xl shadow-lg border border-slate-100 flex flex-col gap-6">
+              <div class="flex text-amber-400"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+              <img src="./images/depoimento%2002.webp" class="w-full h-48 object-cover rounded-2xl mb-2" />
+              <p class="text-slate-700 italic flex-grow">"Estudo nas paradas de estrada. Sem essa de senha de plataforma. Aponto o celular e aprendo."</p>
+              <div class="flex items-center gap-4 pt-6 border-t border-slate-100">
+                <div class="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 overflow-hidden">
+                  <img src="./images/depoimento%2002.webp" class="w-full h-full object-cover" />
+                </div>
+                <div>
+                   <p class="font-bold text-slate-900">Marcos Vinícius</p>
+                   <p class="text-xs text-emerald-500 font-black uppercase tracking-widest">12 músicas em 3 meses</p>
+                </div>
+              </div>
+            </div>
+          
+            <div class="bg-white p-8 rounded-3xl shadow-lg border border-slate-100 flex flex-col gap-6">
+              <div class="flex text-amber-400"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+              <img src="./images/depoimento%2003.jpg" class="w-full h-48 object-cover rounded-2xl mb-2" />
+              <p class="text-slate-700 italic flex-grow">"Meu pai tocava viola e eu quis honrar a memória dele. Esse método foi feito pra mim."</p>
+              <div class="flex items-center gap-4 pt-6 border-t border-slate-100">
+                <div class="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 overflow-hidden">
+                  <img src="./images/depoimento%2003.jpg" class="w-full h-full object-cover" />
+                </div>
+                <div>
+                   <p class="font-bold text-slate-900">Dona Lúcia</p>
+                   <p class="text-xs text-emerald-500 font-black uppercase tracking-widest">Tocou no aniversário da neta</p>
+                </div>
+              </div>
+            </div>
           
         </div>
-
-        <div class="lp-pulse-cta">
-          <a href="#"
-    style="display:inline-block; background:#FFD700; color:#1B2B5E; padding:1.125rem 2.5rem; border-radius:8px; font-size:1.1rem; font-weight:800; box-shadow:0 4px 24px rgba(255, 215, 0, 0.4); text-decoration:none; letter-spacing:0.04em; transition:transform 0.18s,box-shadow 0.18s; display:block; text-align:center; width:100%;"
-    onmouseover="this.style.transform='scale(1.03)';this.style.boxShadow='0 8px 32px rgba(0,0,0,0.3)'"
-    onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 4px 24px rgba(255, 215, 0, 0.4)'"
-  >QUERO TOCAR VIOLA AGORA</a>
+      </div>
+    </section>
+  </div>
+<div id="author-wrapper" class="section-entry glass shadow-2xl rounded-[2rem] margin-6 p-4">
+    <section class="py-24" style="background:#FFFEF7">
+      <div class="container mx-auto px-6">
+        <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-16">
+          <div class="md:w-1/3 flex justify-center">
+            <div class="relative">
+              <div class="absolute -inset-4 bg-#8B451330 rounded-full blur-2xl"></div>
+              <img src="./images/professor%20paulo%20com%20a%20viola.webp" class="relative w-64 h-64 rounded-full object-cover border-8 border-white shadow-2xl" />
+            </div>
+          </div>
+          <div class="md:w-2/3">
+            <span class="text-xs font-black uppercase tracking-[0.2em] mb-4 block" style="color:#8B4513">O Mentor por trás do Método</span>
+            <h2 class="text-3xl lg:text-5xl font-black mb-8 leading-tight" style="color:#1B2B5E">Conheça o Criador do Manual da Viola Caipira</h2>
+            <p class="text-lg opacity-80 leading-relaxed mb-6" style="color:#5C5C5C">Imagine chegar no próximo churrasco de família, pegar a viola e arrancar aplausos tocando aquela música que seu avô cantava. Com o Manual da Viola Caipira, isso é possível mesmo sem 'dom' natural.</p>
+            <p class="font-bold border-l-4 pl-6 py-2 italic text-slate-600 border-#1B2B5E50" style="border-color:#1B2B5E50">O único método 3-em-1 do Brasil: livro físico premium + 107 músicas + 2 cursos completos via QR Code</p>
+          </div>
         </div>
-        <p style="color:#64748B; font-size:0.78rem; margin-top:0.75rem; display:flex; align-items:center; justify-content:center; gap:0.3rem;">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#64748B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Garantir Minha Edição Limitada + Frete Grátis
-        </p>
       </div>
-    </div>
-  </section>
-
-  <!-- GUARANTEE -->
-  <section id="guarantee" class="lp-section" style="background:#F9FAFB;">
-    <div class="lp-container-sm" style="text-align:center;">
-      <div class="lp-reveal" style="background:#FFFFFF; border-radius:20px; padding:2.5rem; border:2px solid #05966944; max-width:600px; margin:0 auto;">
-        <div style="color:#059669; margin-bottom:1rem;"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-        <h2 style="font-size:1.6rem; font-weight:800; color:#059669; margin-bottom:1rem;">Garantia Total</h2>
-        <p style="color:#64748B; line-height:1.8;">GARANTIA INCONDICIONAL DE 30 DIAS DO VIOLEIRO SATISFEITO: Se em 30 dias você não estiver tocando pelo menos 3 músicas completas na viola, ou se por QUALQUER motivo achar que o método não é pra você, devolvemos 100% do seu dinheiro sem perguntas — e você ainda pode ficar com o livro físico como presente nosso. O risco é todo nosso. A decisão é fácil.</p>
+    </section>
+  </div>
+<div id="offer-wrapper" class="section-entry glass shadow-2xl rounded-[2rem] margin-6 p-4">
+    <section id="oferta" class="py-24 relative overflow-hidden" style="background:linear-gradient(to bottom, #FFFEF7, #1B2B5E05)">
+      <div class="container mx-auto px-6 relative z-10">
+        <div class="max-w-4xl mx-auto bg-white rounded-[40px] shadow-2xl overflow-hidden flex flex-col lg:flex-row border border-slate-100">
+          <div class="lg:w-1/2 p-12 lg:p-16 flex flex-col justify-center">
+             <h2 class="text-3xl lg:text-4xl font-black mb-6" style="color:#1B2B5E">Oferta Especial de Lançamento</h2>
+             <p class="text-lg mb-8 opacity-70" style="color:#5C5C5C">Garanta seu kit completo hoje com desconto exclusivo.</p>
+             <div class="space-y-4 mb-8">
+               
+                 <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-50 border border-slate-100">
+                   <div class="flex-shrink-0 text-emerald-500"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                   <span class="text-sm font-bold text-slate-700">Curso de Pagode de Viola</span>
+                 </div>
+               
+                 <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-50 border border-slate-100">
+                   <div class="flex-shrink-0 text-emerald-500"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                   <span class="text-sm font-bold text-slate-700">Guia de Afinação Perfeita</span>
+                 </div>
+               
+                 <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-50 border border-slate-100">
+                   <div class="flex-shrink-0 text-emerald-500"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                   <span class="text-sm font-bold text-slate-700">Repertório de Ouro</span>
+                 </div>
+               
+                 <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-50 border border-slate-100">
+                   <div class="flex-shrink-0 text-emerald-500"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                   <span class="text-sm font-bold text-slate-700">Acesso ao Grupo VIP</span>
+                 </div>
+               
+                 <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-50 border border-slate-100">
+                   <div class="flex-shrink-0 text-emerald-500"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                   <span class="text-sm font-bold text-slate-700">Certificado Digital</span>
+                 </div>
+               
+             </div>
+             <div class="mb-8">
+               <p class="text-slate-400 line-through text-lg opacity-60">De R$ 1.291</p>
+               <div class="flex items-baseline gap-2">
+                 <span class="text-5xl font-black" style="color:#1B2B5E">R$ 297</span>
+                 <span class="text-emerald-500 font-bold bg-emerald-50 px-3 py-1 rounded-lg text-xs uppercase tracking-widest border border-emerald-100">R$ 994 OFF</span>
+               </div>
+             </div>
+             <a href="#" 
+    class="inline-block transform transition-all duration-300 hover:scale-[1.03] active:scale-95 text-center w-full py-6 text-xl shadow-xl hover:shadow-emerald-500/20"
+    style="background:#FFD700; color:#1B2B5E; padding:1rem 2rem; border-radius:2rem; font-size:1.1rem; font-weight:900; box-shadow:0 10px 30px -5px rgba(27, 43, 94, 0.3);"
+  >QUERO MEU MANUAL AGORA</a>
+             <p class="text-center mt-4 text-[10px] uppercase font-black tracking-widest opacity-40 flex items-center justify-center gap-1" style="color:#5C5C5C">
+               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#5C5C5C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Pagamento Seguro & Imediato
+             </p>
+          </div>
+          <div class="lg:w-1/2 bg-slate-900 flex items-center justify-center p-12 pt-0 lg:pt-12">
+            <div class="relative w-full">
+               <div class="absolute -top-10 -right-10 bg-amber-400 text-black font-black py-4 px-8 rounded-full transform rotate-12 shadow-2xl z-20">ESTE É O SEU DIA!</div>
+               <img src="./images/produto-livro.webp" alt="undefined" class="w-full rounded-2xl shadow-2xl transform hover:scale-105 duration-500 transition-transform" loading="lazy" />
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section id="faq" class="lp-section" style="background:#FFFFFF;">
-    <div class="lp-container-sm">
-      <h2 class="lp-reveal" style="font-size:clamp(1.75rem,4vw,2.1rem); font-weight:900; text-align:center; margin-bottom:2.25rem; color:#1B2B5E;">
-        Perguntas Frequentes
-      </h2>
-      <div class="lp-reveal" style="display:flex; flex-direction:column; gap:0.75rem;">
-        
-    <div style="border:1px solid #1B2B5E28; border-radius:10px; overflow:hidden;">
-      <button onclick="lpToggleFaq(0)" style="width:100%; text-align:left; padding:1.2rem 1.5rem; background:#FFFFFF; border:none; cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:1rem;">
-        <span style="font-family:'Montserrat',sans-serif; font-weight:600; color:#1B2B5E; font-size:1rem; flex:1;">Nunca toquei nenhum instrumento na vida. Vou conseguir?</span>
-        <span id="faq-icon-0" style="color:#FFD700; flex-shrink:0; display:flex; align-items:center; transition:transform 0.3s;"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFD700" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
-      </button>
-      <div id="faq-0" style="display:none; padding:1.2rem 1.5rem; background:#F9FAFB; border-top:1px solid #1B2B5E18;">
-        <p style="color:#64748B; margin:0; line-height:1.75; font-size:1.05rem;">Sim! O método foi criado exatamente pra quem nunca tocou nada. Começamos do absoluto zero — como segurar a viola, onde colocar os dedos, tudo explicado como se você fosse uma criança. 73% dos nossos alunos nunca tinham tocado instrumento nenhum.</p>
+    </section>
+  </div>
+<div id="guarantee-wrapper" class="section-entry glass shadow-2xl rounded-[2rem] margin-6 p-4">
+    <section class="py-24" style="background:#F5F1E8">
+      <div class="container mx-auto px-6 text-center max-w-3xl">
+        <div class="mb-8 flex justify-center text-emerald-500 drop-shadow-lg"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h2 class="text-3xl lg:text-4xl font-black mb-6" style="color:#1B2B5E">RISCO ZERO PARA VOCÊ</h2>
+        <p class="text-lg leading-relaxed opacity-70" style="color:#5C5C5C">Garantia de 30 Dias: Se não tocar pelo menos 3 músicas em um mês, devolvemos seu dinheiro e você fica com o livro.</p>
       </div>
-    </div>
-
-    <div style="border:1px solid #1B2B5E28; border-radius:10px; overflow:hidden;">
-      <button onclick="lpToggleFaq(1)" style="width:100%; text-align:left; padding:1.2rem 1.5rem; background:#FFFFFF; border:none; cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:1rem;">
-        <span style="font-family:'Montserrat',sans-serif; font-weight:600; color:#1B2B5E; font-size:1rem; flex:1;">Tenho mais de 50/60/70 anos. Não sou velho demais?</span>
-        <span id="faq-icon-1" style="color:#FFD700; flex-shrink:0; display:flex; align-items:center; transition:transform 0.3s;"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFD700" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
-      </button>
-      <div id="faq-1" style="display:none; padding:1.2rem 1.5rem; background:#F9FAFB; border-top:1px solid #1B2B5E18;">
-        <p style="color:#64748B; margin:0; line-height:1.75; font-size:1.05rem;">De jeito nenhum! Nossa aluna mais velha tem 78 anos e toca lindamente. Idade não é barreira — método ruim é. Com o passo-a-passo certo e a prática diária de 20 minutos, qualquer pessoa aprende. Temos centenas de alunos acima de 50 anos tocando.</p>
+    </section>
+  </div>
+<div id="faq-wrapper" class="section-entry glass shadow-2xl rounded-[2rem] margin-6 p-4">
+    <section class="py-24 bg-white" style="background:#FFFEF7">
+      <div class="container mx-auto px-6 max-w-3xl">
+        <h2 class="text-3xl lg:text-5xl font-black mb-16 text-center" style="color:#1B2B5E">DÚVIDAS FREQUENTES</h2>
+        <div class="space-y-4">
+          
+            <details class="group bg-slate-50 rounded-2xl border border-slate-100 overflow-hidden transition-all duration-300 open:shadow-xl">
+              <summary class="flex items-center justify-between p-6 cursor-pointer list-none font-bold text-slate-800">
+                <span>Nunca toquei nada, consigo?</span>
+                <span class="transition-transform duration-300 group-open:rotate-45 block"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8B4513" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+              </summary>
+              <div class="px-6 pb-6 text-slate-600 leading-relaxed">
+                Sim! 73% dos nossos alunos começaram do absoluto zero.
+              </div>
+            </details>
+          
+            <details class="group bg-slate-50 rounded-2xl border border-slate-100 overflow-hidden transition-all duration-300 open:shadow-xl">
+              <summary class="flex items-center justify-between p-6 cursor-pointer list-none font-bold text-slate-800">
+                <span>Tem limite de idade?</span>
+                <span class="transition-transform duration-300 group-open:rotate-45 block"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8B4513" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+              </summary>
+              <div class="px-6 pb-6 text-slate-600 leading-relaxed">
+                Temos alunos de 15 a 78 anos. O método funciona em qualquer fase da vida.
+              </div>
+            </details>
+          
+        </div>
       </div>
-    </div>
-
-    <div style="border:1px solid #1B2B5E28; border-radius:10px; overflow:hidden;">
-      <button onclick="lpToggleFaq(2)" style="width:100%; text-align:left; padding:1.2rem 1.5rem; background:#FFFFFF; border:none; cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:1rem;">
-        <span style="font-family:'Montserrat',sans-serif; font-weight:600; color:#1B2B5E; font-size:1rem; flex:1;">Preciso de internet boa pra usar o QR Code?</span>
-        <span id="faq-icon-2" style="color:#FFD700; flex-shrink:0; display:flex; align-items:center; transition:transform 0.3s;"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFD700" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
-      </button>
-      <div id="faq-2" style="display:none; padding:1.2rem 1.5rem; background:#F9FAFB; border-top:1px solid #1B2B5E18;">
-        <p style="color:#64748B; margin:0; line-height:1.75; font-size:1.05rem;">Não precisa de internet de fibra. Qualquer 4G básico carrega os vídeos. E uma vez carregado, você pode reassistir quantas vezes quiser. Muitos alunos baixam os vídeos no WiFi de casa e assistem offline depois.</p>
+    </section>
+  </div>
+<div id="cta-final-wrapper" class="section-entry glass shadow-2xl rounded-[2rem] margin-6 p-4">
+    <section class="py-32 text-center relative overflow-hidden" style="background:#1B2B5E">
+      <div class="absolute inset-0 opacity-10" style="background-image: url('https://www.transparenttextures.com/patterns/cubes.png')"></div>
+      <div class="container mx-auto px-6 relative z-10">
+        <h2 class="text-4xl lg:text-7xl font-black text-white mb-12 uppercase tracking-tighter leading-none">Sua viola está esperando por você.</h2>
+        <a href="#oferta" 
+    class="inline-block transform transition-all duration-300 hover:scale-[1.03] active:scale-95 text-center px-16 py-6 text-2xl shadow-2xl"
+    style="background:#fff; color:#1B2B5E; padding:1rem 2rem; border-radius:2rem; font-size:1.1rem; font-weight:900; box-shadow:0 10px 30px -5px rgba(27, 43, 94, 0.3);"
+  >QUERO MEU MANUAL AGORA</a>
       </div>
+    </section>
+  </div>
+  
+  <footer class="py-12 bg-slate-900 text-slate-500 text-center text-xs uppercase font-bold tracking-widest">
+    <div class="container mx-auto px-6">
+      <p class="mb-2">&copy; 2026 Manual da Viola Caipira. All rights reserved.</p>
+      <p class="opacity-30">Powered by Landing Pages Creator Pro V2 (Max Potential Engine)</p>
     </div>
-
-    <div style="border:1px solid #1B2B5E28; border-radius:10px; overflow:hidden;">
-      <button onclick="lpToggleFaq(3)" style="width:100%; text-align:left; padding:1.2rem 1.5rem; background:#FFFFFF; border:none; cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:1rem;">
-        <span style="font-family:'Montserrat',sans-serif; font-weight:600; color:#1B2B5E; font-size:1rem; flex:1;">E se eu não gostar ou não me adaptar?</span>
-        <span id="faq-icon-3" style="color:#FFD700; flex-shrink:0; display:flex; align-items:center; transition:transform 0.3s;"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFD700" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
-      </button>
-      <div id="faq-3" style="display:none; padding:1.2rem 1.5rem; background:#F9FAFB; border-top:1px solid #1B2B5E18;">
-        <p style="color:#64748B; margin:0; line-height:1.75; font-size:1.05rem;">Você tem 30 dias pra testar sem risco nenhum. Se não gostar, se não se adaptar, se seu cachorro comer o livro — não importa o motivo — devolvemos 100% do seu dinheiro E você fica com o livro. Simples assim.</p>
-      </div>
-    </div>
-
-    <div style="border:1px solid #1B2B5E28; border-radius:10px; overflow:hidden;">
-      <button onclick="lpToggleFaq(4)" style="width:100%; text-align:left; padding:1.2rem 1.5rem; background:#FFFFFF; border:none; cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:1rem;">
-        <span style="font-family:'Montserrat',sans-serif; font-weight:600; color:#1B2B5E; font-size:1rem; flex:1;">Quanto tempo por dia preciso praticar?</span>
-        <span id="faq-icon-4" style="color:#FFD700; flex-shrink:0; display:flex; align-items:center; transition:transform 0.3s;"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFD700" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
-      </button>
-      <div id="faq-4" style="display:none; padding:1.2rem 1.5rem; background:#F9FAFB; border-top:1px solid #1B2B5E18;">
-        <p style="color:#64748B; margin:0; line-height:1.75; font-size:1.05rem;">Recomendamos 20-30 minutos por dia, mas muitos alunos praticam só 15 minutos e ainda assim evoluem. O segredo não é quantidade, é consistência. Melhor 15 minutos todo dia do que 2 horas uma vez por semana.</p>
-      </div>
-    </div>
-
-    <div style="border:1px solid #1B2B5E28; border-radius:10px; overflow:hidden;">
-      <button onclick="lpToggleFaq(5)" style="width:100%; text-align:left; padding:1.2rem 1.5rem; background:#FFFFFF; border:none; cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:1rem;">
-        <span style="font-family:'Montserrat',sans-serif; font-weight:600; color:#1B2B5E; font-size:1rem; flex:1;">O livro é enviado pelo correio? Quanto tempo demora?</span>
-        <span id="faq-icon-5" style="color:#FFD700; flex-shrink:0; display:flex; align-items:center; transition:transform 0.3s;"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFD700" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
-      </button>
-      <div id="faq-5" style="display:none; padding:1.2rem 1.5rem; background:#F9FAFB; border-top:1px solid #1B2B5E18;">
-        <p style="color:#64748B; margin:0; line-height:1.75; font-size:1.05rem;">Sim, é um livro físico de verdade enviado pra sua casa. Prazo médio de 5-12 dias úteis dependendo da região. E o frete é GRÁTIS pra todo Brasil nesta edição de lançamento.</p>
-      </div>
-    </div>
-
-    <div style="border:1px solid #1B2B5E28; border-radius:10px; overflow:hidden;">
-      <button onclick="lpToggleFaq(6)" style="width:100%; text-align:left; padding:1.2rem 1.5rem; background:#FFFFFF; border:none; cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:1rem;">
-        <span style="font-family:'Montserrat',sans-serif; font-weight:600; color:#1B2B5E; font-size:1rem; flex:1;">Já tentei outros cursos e desisti. Por que esse seria diferente?</span>
-        <span id="faq-icon-6" style="color:#FFD700; flex-shrink:0; display:flex; align-items:center; transition:transform 0.3s;"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFD700" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
-      </button>
-      <div id="faq-6" style="display:none; padding:1.2rem 1.5rem; background:#F9FAFB; border-top:1px solid #1B2B5E18;">
-        <p style="color:#64748B; margin:0; line-height:1.75; font-size:1.05rem;">Porque outros cursos te jogam numa plataforma fria com 200 vídeos e te deixam sozinho. Aqui você tem um LIVRO na mão — algo físico que te cobra, que você vê todo dia. Mais o grupo VIP onde você tira dúvidas e vê outros evoluindo. O formato híbrido (físico + digital) é o que faz a diferença.</p>
-      </div>
-    </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA FINAL -->
-  <section id="cta-final" class="lp-section" style="background:linear-gradient(135deg,#1B2B5E,#FFD700); text-align:center;">
-    <div class="lp-container-sm">
-      <p class="lp-reveal" style="font-size:0.82rem; font-weight:700; color:#fff; opacity:0.8; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:1rem;">Sua Transformacao Comeca Agora</p>
-      <h2 class="lp-reveal" style="font-size:clamp(2rem,5vw,2.75rem); font-weight:900; color:#fff; margin-bottom:1.5rem; line-height:1.15;">
-        Sua viola tá esperando por você.
-      </h2>
-      <div class="lp-reveal lp-pulse-cta">
-        <a href="#oferta"
-    style="display:inline-block; background:#fff; color:#1B2B5E; padding:1.125rem 2.5rem; border-radius:8px; font-size:1.1rem; font-weight:800; box-shadow:0 4px 24px rgba(255, 215, 0, 0.4); text-decoration:none; letter-spacing:0.04em; transition:transform 0.18s,box-shadow 0.18s; font-size:1.1rem;"
-    onmouseover="this.style.transform='scale(1.03)';this.style.boxShadow='0 8px 32px rgba(0,0,0,0.3)'"
-    onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 4px 24px rgba(255, 215, 0, 0.4)'"
-  >QUERO TOCAR VIOLA AGORA</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer style="background:#F9FAFB; border-top:1px solid #1B2B5E18; padding:2rem 1.25rem; text-align:center;">
-    <p style="color:#64748B; font-size:0.82rem;">&copy; 2026 Manual da Viola Caipira. Todos os direitos reservados.</p>
-    <p style="color:#64748B; font-size:0.72rem; margin-top:0.35rem; opacity:0.45;">Gerado por Landing Pages Creator Pro</p>
   </footer>
 
-<script>
-  // Scroll reveal
-  const lpObserver = new IntersectionObserver((entries) => {
-    entries.forEach((e) => { if (e.isIntersecting) e.target.classList.add('visible'); });
-  }, { threshold: 0.1 });
-  document.querySelectorAll('.lp-reveal').forEach((el) => lpObserver.observe(el));
-
-  // FAQ toggle
-  function lpToggleFaq(i) {
-    const panel = document.getElementById('faq-' + i);
-    const icon  = document.getElementById('faq-icon-' + i);
-    const isOpen = panel.style.display !== 'none';
-    panel.style.display = isOpen ? 'none' : 'block';
-    icon.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(45deg)';
-  }
-
-  // Countdown timer (24h from page load)
-  (function() {
-    const end = Date.now() + 24 * 60 * 60 * 1000;
-    function tick() {
-      const diff = end - Date.now();
-      if (diff <= 0) { document.getElementById('lp-countdown').innerHTML = '<p style="color:red;font-weight:700; text-align:center; width:100%;">Oferta expirada!</p>'; return; }
-      const h = Math.floor(diff / 3600000);
-      const m = Math.floor((diff % 3600000) / 60000);
-      const s = Math.floor((diff % 60000) / 1000);
-      document.getElementById('lp-hours').textContent   = String(h).padStart(2,'0');
-      document.getElementById('lp-minutes').textContent = String(m).padStart(2,'0');
-      document.getElementById('lp-seconds').textContent = String(s).padStart(2,'0');
-    }
-    tick();
-    setInterval(tick, 1000);
-  })();
-</script>
+  <script>
+    // Reveal magic
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-in', 'fade-in', 'slide-in-from-bottom-8', 'duration-700', 'fill-mode-both');
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.section-entry').forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>
